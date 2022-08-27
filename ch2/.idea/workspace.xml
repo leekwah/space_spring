@@ -115,8 +115,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -141,7 +141,9 @@
     </option>
   </component>
   <component name="ProjectId" id="2Dp9l6n3AQgq1RJotxcsp6PKkve" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
     <option name="autoscrollToSource" value="true" />
@@ -276,8 +278,16 @@
       <updated>1661385307772</updated>
       <workItem from="1661385309342" duration="2320000" />
       <workItem from="1661519972145" duration="256000" />
-      <workItem from="1661521122719" duration="865000" />
+      <workItem from="1661521122719" duration="4045000" />
     </task>
+    <task id="LOCAL-00001" summary="20220826">
+      <created>1661522082268</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1661522082268</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -293,5 +303,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="20220826" />
+    <option name="LAST_COMMIT_MESSAGE" value="20220826" />
   </component>
 </project>
