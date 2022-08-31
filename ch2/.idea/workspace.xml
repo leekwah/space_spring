@@ -115,14 +115,15 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="HTML File" />
         <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -181,6 +182,9 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/webapp/resources" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/views" />
+    </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.65">
     <configuration name="All in ch2 (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
@@ -199,7 +203,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="registerForm.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/ch2/src/main/webapp/resources/registerForm.html" useBuiltInWebServerPort="true">
+    <configuration name="registerForm.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/ch2/src/main/webapp/WEB-INF/views/registerForm.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="Tomcat 9.0.65" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.65" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
@@ -284,9 +288,7 @@
       </ConfigurationWrapper>
       <method v="2">
         <option name="Make" enabled="true" />
-        <option name="BuildArtifacts" enabled="true">
-          <artifact name="ch2:war" />
-        </option>
+        <option name="BuildArtifacts" enabled="false" />
       </method>
     </configuration>
     <recent_temporary>
@@ -308,7 +310,7 @@
       <workItem from="1661385309342" duration="2320000" />
       <workItem from="1661519972145" duration="256000" />
       <workItem from="1661521122719" duration="22033000" />
-      <workItem from="1661868057991" duration="815000" />
+      <workItem from="1661868057991" duration="7352000" />
     </task>
     <task id="LOCAL-00001" summary="20220826">
       <created>1661522082268</created>
@@ -324,7 +326,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661609924736</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="20220830">
+      <created>1661868911477</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1661868911477</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -344,6 +353,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="20220826" />
     <MESSAGE value="20220827" />
-    <option name="LAST_COMMIT_MESSAGE" value="20220827" />
+    <MESSAGE value="20220830" />
+    <option name="LAST_COMMIT_MESSAGE" value="20220830" />
   </component>
 </project>
