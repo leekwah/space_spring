@@ -13,17 +13,14 @@
 	<annotation-driven />
 
 	<!-- Handles HTTP GET requests for /resources/** by efficiently serving up static resources in the ${webappRoot}/resources directory -->
-	<resources mapping="/**" location="/resources/" />
+	<resources mapping="/resources/**" location="/resources/" />
 
 	<!-- Resolves views selected for rendering by @Controllers to .jsp resources in the /WEB-INF/views directory -->
 	<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<beans:property name="prefix" value="/WEB-INF/views/" />
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
-
-	<!-- mvc:view-controller를 통해서 path 주소를, registerForm과 연결한다.-->
-	<!-- 여기 코드에서는, 위 코드에서 mvc를 안쓰게 해뒀기 때문에 view-controller만 사용해도 되게 만들어 둔 것이다. -->
-	<view-controller path="/register/add" view-name="registerForm"/>
+	
 	<context:component-scan base-package="com.fastcampus.ch2" />
 	
 	

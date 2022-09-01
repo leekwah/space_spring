@@ -1,7 +1,6 @@
-INDEX VERSION 1.4+C:\Users\lkwng\Documents\GitHub\space_spring\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
-3726918748.index
-2415766096.index
-3723425752.index
-3203653329.index
-1492720615.index
-662191597.index
+INDEX VERSION 1.4+/Users/kwah/Documents/GitHub/space_spring/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
+1093876461.index
+4055169087.index
+3965139419.index
+543901838.index
+2877281726.index
