@@ -49,15 +49,21 @@ class AppContext {
         }
     }
 
-    Object getBean(String key) {
-        return map.get(key);
+    Object getBean(String key) { return map.get(key); }
+    Object getBean(Class clazz) {
+        for(Object obj : map.values()) {
+            if (clazz.isInstance(obj))
+                return obj;
+        }
+        return null;
     }
 }
 
 public class Main3 {
     public static void main(String[] args)  throws Exception {
         AppContext ac = new AppContext();
-        Car car = (Car)ac.getBean("car");
+        Car car = (Car)ac.getBean("car"); // byName으로 검색
+        Car car2 = (Car)ac.getBean(Car.class); // byType으로 객체를 검색
         System.out.println("car = " + car); // car = com.fastcampus.ch3.diCopy2.Truck@47f6473 출력
         Engine engine = (Engine)ac.getBean("engine");
         System.out.println("engine = " + engine); // engine = com.fastcampus.ch3.diCopy2.Engine@15975490 출력
