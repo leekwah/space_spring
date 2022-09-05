@@ -54,6 +54,7 @@ class AppContext {
         for(Object obj : map.values()) {
             if (clazz.isInstance(obj))
                 return obj;
+
         }
         return null;
     }
