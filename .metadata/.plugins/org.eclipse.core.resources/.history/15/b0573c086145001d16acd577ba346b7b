@@ -1,0 +1,7 @@
+package com.kwah.ch2;
+
+public class TwoDice {
+	public void main(String[] args) {
+		
+	}
+}

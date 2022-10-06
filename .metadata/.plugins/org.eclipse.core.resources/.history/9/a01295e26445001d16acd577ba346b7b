@@ -1,0 +1,35 @@
+package com.kwah.ch2;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.Calendar;
+
+@Controller
+public class YoilTellerMVC {
+    @RequestMapping("/getYoilMVC")
+    public void main(int year, int month, int day, HttpServletResponse response) throws IOException {
+
+    	Calendar cal = Calendar.getInstance();
+    	cal.set(year, month - 1, day);
+    	
+        int dayOfWeek = cal.get(Calendar.DAY_OF_WEEK);
+        char yoil = " �Ͽ�ȭ�������".charAt(dayOfWeek);
+
+        // 3. ���
+        response.setContentType("text/html");
+        response.setCharacterEncoding("utf-8");
+        PrintWriter out = response.getWriter();
+        out.println("<html>");
+        out.println("<head>");
+        out.println("</head>");
+        out.println("<body>");
+        out.println(year + "�� " + month + "�� " + day + "���� ");
+        out.println(yoil + "�����Դϴ�.");
+        out.println("</body>");
+        out.println("</html>");
+        out.close();
+    }
+}
