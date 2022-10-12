@@ -1,0 +1,9 @@
+package com.kwah.ch2;
+
+@Controller
+public class TwoDice {
+	@RequestMapping("/rollDice")
+	public void main(String[] args) {
+		
+	}
+}
