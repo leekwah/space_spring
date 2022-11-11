@@ -4,33 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3dc9dac4-8d0e-4d5a-9c16-605b1cae232e" name="변경" comment="변경">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kwah/jdbcex/controller/TodoListController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kwah/jdbcex/controller/TodoReadController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kwah/jdbcex/controller/TodoRegisterController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kwah/jdbcex/dao/ConnectionUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kwah/jdbcex/dao/TodoDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kwah/jdbcex/domain/TodoVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kwah/jdbcex/dto/TodoDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kwah/jdbcex/service/TodoService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kwah/jdbcex/util/MapperUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/log4j2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/kwah/dao/ConnectTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/kwah/dao/TodoDAOTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/kwah/service/TodoServiceTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kwah/w1/SampleServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kwah/w1/todo/TodoListController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kwah/w1/todo/TodoReadController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kwah/w1/todo/TodoRegisterController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kwah/w1/todo/dto/TodoDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kwah/w1/todo/service/TodoService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/todo/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/todo/list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/todo/read.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/todo/read.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/todo/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/todo/register.jsp" afterDir="false" />
+    <list default="true" id="3dc9dac4-8d0e-4d5a-9c16-605b1cae232e" name="변경" comment="리스트 구현">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kwah/jdbcex/controller/TodoModifyController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kwah/jdbcex/controller/TodoRemoveController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/todo/modify.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kwah/jdbcex/service/TodoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kwah/jdbcex/service/TodoService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +28,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
+        <option value="Jsp File" />
         <option value="Class" />
       </list>
     </option>
@@ -327,8 +307,23 @@
       <workItem from="1668076206489" duration="12000" />
       <workItem from="1668078174055" duration="2574000" />
       <workItem from="1668148956487" duration="3790000" />
-      <workItem from="1668153092375" duration="2088000" />
+      <workItem from="1668153092375" duration="3379000" />
     </task>
+    <task id="LOCAL-00001" summary="리스트 구현">
+      <created>1668155280404</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1668155280404</updated>
+    </task>
+    <task id="LOCAL-00002" summary="리스트 구현">
+      <created>1668155295838</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1668155295838</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -344,6 +339,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="리스트 구현" />
+    <option name="LAST_COMMIT_MESSAGE" value="리스트 구현" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
