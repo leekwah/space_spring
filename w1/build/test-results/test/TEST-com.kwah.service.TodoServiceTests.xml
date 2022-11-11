@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kwah.service.TodoServiceTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-11-11T07:54:53" hostname="kwahs-MacBook-Pro.local" time="0.102">
+  <properties/>
+  <testcase name="testRegister()" classname="com.kwah.service.TodoServiceTests" time="0.102"/>
+  <system-out><![CDATA[16:54:53.727 [Test worker] INFO  com.kwah.service.TodoServiceTests - --------------------------------------------------
+16:54:53.730 [Test worker] INFO  com.kwah.service.TodoServiceTests - TodoDTO(tno=null, title=JDBC Test Title, dueDate=2022-11-11, finished=false)
+16:54:53.740 [Test worker] INFO  com.kwah.jdbcex.service.TodoService - TodoVO(tno=null, title=JDBC Test Title, dueDate=2022-11-11, finished=false)
+16:54:53.751 [Test worker] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+16:54:53.794 [Test worker] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@6a84bc2a
+16:54:53.795 [Test worker] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

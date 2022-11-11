@@ -1,0 +1,6 @@
+x16:54:53.727 [Test worker] INFO  com.kwah.service.TodoServiceTests - --------------------------------------------------
+’16:54:53.730 [Test worker] INFO  com.kwah.service.TodoServiceTests - TodoDTO(tno=null, title=JDBC Test Title, dueDate=2022-11-11, finished=false)
+“16:54:53.740 [Test worker] INFO  com.kwah.jdbcex.service.TodoService - TodoVO(tno=null, title=JDBC Test Title, dueDate=2022-11-11, finished=false)
+a16:54:53.751 [Test worker] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+Š16:54:53.794 [Test worker] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@6a84bc2a
+f16:54:53.795 [Test worker] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
