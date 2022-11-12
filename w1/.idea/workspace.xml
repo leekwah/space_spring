@@ -4,12 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3dc9dac4-8d0e-4d5a-9c16-605b1cae232e" name="변경" comment="리스트 구현">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kwah/jdbcex/controller/TodoModifyController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kwah/jdbcex/controller/TodoRemoveController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/todo/modify.jsp" afterDir="false" />
+    <list default="true" id="3dc9dac4-8d0e-4d5a-9c16-605b1cae232e" name="변경" comment="todo list">
+      <change afterPath="$PROJECT_DIR$/../w2/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../w2/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../w2/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../w2/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../w2/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../w2/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../w2/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../w2/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../w2/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../w2/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../w2/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../w2/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../w2/src/main/webapp/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kwah/jdbcex/service/TodoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kwah/jdbcex/service/TodoService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -307,7 +316,8 @@
       <workItem from="1668076206489" duration="12000" />
       <workItem from="1668078174055" duration="2574000" />
       <workItem from="1668148956487" duration="3790000" />
-      <workItem from="1668153092375" duration="3379000" />
+      <workItem from="1668153092375" duration="4331000" />
+      <workItem from="1668157480248" duration="255000" />
     </task>
     <task id="LOCAL-00001" summary="리스트 구현">
       <created>1668155280404</created>
@@ -323,7 +333,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668155295838</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="todo list">
+      <created>1668156527472</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1668156527472</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -342,7 +359,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="리스트 구현" />
-    <option name="LAST_COMMIT_MESSAGE" value="리스트 구현" />
+    <MESSAGE value="todo list" />
+    <option name="LAST_COMMIT_MESSAGE" value="todo list" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
