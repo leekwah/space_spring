@@ -4,22 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9a065257-8b9c-43db-8505-6c111d4b4fe0" name="Changes" comment="로그인기능 구현, UTF-8 필터, 세션">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kwah/w2/listener/LoginListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kwah/w2/listener/W2AppListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/380935bd-fc95-45f0-a03f-63407e1cf369.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/380935bd-fc95-45f0-a03f-63407e1cf369.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kwah/w2/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kwah/w2/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kwah/w2/controller/TodoListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kwah/w2/controller/TodoListController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kwah/w2/controller/TodoReadController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kwah/w2/controller/TodoReadController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kwah/w2/dao/MemberDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kwah/w2/dao/MemberDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kwah/w2/domain/MemberVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kwah/w2/domain/MemberVO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kwah/w2/dto/MemberDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kwah/w2/dto/MemberDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kwah/w2/filter/LoginCheckFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kwah/w2/filter/LoginCheckFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kwah/w2/service/MemberService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kwah/w2/service/MemberService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/todo/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/todo/list.jsp" afterDir="false" />
-    </list>
+    <list default="true" id="9a065257-8b9c-43db-8505-6c111d4b4fe0" name="Changes" comment="쿠키, 리스너" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -184,7 +169,7 @@
       <updated>1668157913513</updated>
       <workItem from="1668157915586" duration="1596000" />
       <workItem from="1668254130010" duration="4766000" />
-      <workItem from="1668387020907" duration="2502000" />
+      <workItem from="1668387020907" duration="2659000" />
     </task>
     <task id="LOCAL-00001" summary="로그인">
       <created>1668254467512</created>
@@ -207,7 +192,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668321792047</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="쿠키, 리스너">
+      <created>1668390027165</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1668390027165</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -227,6 +219,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="로그인" />
     <MESSAGE value="로그인기능 구현, UTF-8 필터, 세션" />
-    <option name="LAST_COMMIT_MESSAGE" value="로그인기능 구현, UTF-8 필터, 세션" />
+    <MESSAGE value="쿠키, 리스너" />
+    <option name="LAST_COMMIT_MESSAGE" value="쿠키, 리스너" />
   </component>
 </project>
