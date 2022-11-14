@@ -4,16 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9a065257-8b9c-43db-8505-6c111d4b4fe0" name="Changes" comment="로그인">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kwah/w2/controller/LogoutController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kwah/w2/dao/MemberDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kwah/w2/domain/MemberVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kwah/w2/dto/MemberDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kwah/w2/filter/LoginCheckFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kwah/w2/filter/UTF8Filter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kwah/w2/service/MemberService.java" afterDir="false" />
+    <list default="true" id="9a065257-8b9c-43db-8505-6c111d4b4fe0" name="Changes" comment="로그인기능 구현, UTF-8 필터, 세션">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kwah/w2/listener/LoginListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kwah/w2/listener/W2AppListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/380935bd-fc95-45f0-a03f-63407e1cf369.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/380935bd-fc95-45f0-a03f-63407e1cf369.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/kwah/w2/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kwah/w2/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kwah/w2/controller/TodoListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kwah/w2/controller/TodoListController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kwah/w2/controller/TodoReadController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kwah/w2/controller/TodoReadController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kwah/w2/dao/MemberDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kwah/w2/dao/MemberDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kwah/w2/domain/MemberVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kwah/w2/domain/MemberVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kwah/w2/dto/MemberDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kwah/w2/dto/MemberDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kwah/w2/filter/LoginCheckFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kwah/w2/filter/LoginCheckFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kwah/w2/service/MemberService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kwah/w2/service/MemberService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/login.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/todo/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/todo/list.jsp" afterDir="false" />
     </list>
@@ -57,23 +60,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/kwah/Downloads/GitHub/spring/w2/src/main/webapp/WEB-INF",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/kwah/Downloads/GitHub/spring/w2/src/main/webapp/WEB-INF&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mariadb"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mariadb&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF" />
@@ -180,7 +183,8 @@
       <option name="presentableId" value="Default" />
       <updated>1668157913513</updated>
       <workItem from="1668157915586" duration="1596000" />
-      <workItem from="1668254130010" duration="4092000" />
+      <workItem from="1668254130010" duration="4766000" />
+      <workItem from="1668387020907" duration="2502000" />
     </task>
     <task id="LOCAL-00001" summary="로그인">
       <created>1668254467512</created>
@@ -189,7 +193,21 @@
       <option name="project" value="LOCAL" />
       <updated>1668254467512</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="로그인기능 구현, UTF-8 필터, 세션">
+      <created>1668321785007</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1668321785007</updated>
+    </task>
+    <task id="LOCAL-00003" summary="로그인기능 구현, UTF-8 필터, 세션">
+      <created>1668321792047</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1668321792047</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -208,6 +226,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="로그인" />
-    <option name="LAST_COMMIT_MESSAGE" value="로그인" />
+    <MESSAGE value="로그인기능 구현, UTF-8 필터, 세션" />
+    <option name="LAST_COMMIT_MESSAGE" value="로그인기능 구현, UTF-8 필터, 세션" />
   </component>
 </project>

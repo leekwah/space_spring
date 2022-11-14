@@ -1181,43 +1181,47 @@ test\\_%|schema||&apos;&apos;||UPDATE|G</Grants>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <index id="340" parent="335" name="PRIMARY">
+    <column id="340" parent="335" name="uuid">
+      <DataType>varchar(50)|0s</DataType>
+      <Position>4</Position>
+    </column>
+    <index id="341" parent="335" name="PRIMARY">
       <ColNames>mid</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="341" parent="335" name="PRIMARY">
+    <key id="342" parent="335" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="342" parent="336" name="tno">
+    <column id="343" parent="336" name="tno">
       <AutoIncrement>12</AutoIncrement>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="343" parent="336" name="title">
+    <column id="344" parent="336" name="title">
       <DataType>varchar(100)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="344" parent="336" name="dueDate">
+    <column id="345" parent="336" name="dueDate">
       <DataType>date|0s</DataType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="345" parent="336" name="finished">
+    <column id="346" parent="336" name="finished">
       <DataType>tinyint(4)|0s</DataType>
       <DefaultExpression>0</DefaultExpression>
       <Position>4</Position>
     </column>
-    <index id="346" parent="336" name="PRIMARY">
+    <index id="347" parent="336" name="PRIMARY">
       <ColNames>tno</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="347" parent="336" name="PRIMARY">
+    <key id="348" parent="336" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>

@@ -32,4 +32,36 @@ public class MemberDAO {
         return memberVO;
     }
 
+    public void updateUuid (String mid, String uuid) throws Exception {
+        String sql = "UPDATE tbl_member SET uuid = ? WHERE mid = ?";
+
+        @Cleanup Connection connection = ConnectionUtil.INSTANCE.getConnection();
+        @Cleanup PreparedStatement preparedStatement = connection.prepareStatement(sql);
+
+        preparedStatement.setString(1, uuid);
+        preparedStatement.setString(2, mid);
+        preparedStatement.executeUpdate();
+
+    }
+
+    public MemberVO selectUUID (String uuid) throws Exception {
+        String query = "SELECT mid, mpw, mname, uuid FROM tbl_member WHERE uuid = ?";
+
+        @Cleanup Connection connection = ConnectionUtil.INSTANCE.getConnection();
+        @Cleanup PreparedStatement preparedStatement = connection.prepareStatement(query);
+        preparedStatement.setString(1, uuid);
+
+        @Cleanup ResultSet resultSet = preparedStatement.executeQuery();
+
+        resultSet.next();
+
+        MemberVO memberVO = MemberVO.builder()
+                .mid(resultSet.getString(1))
+                .mpw(resultSet.getString(2))
+                .mname(resultSet.getString(3))
+                .uuid(resultSet.getString(4))
+                .build();
+
+        return memberVO;
+    }
 }
