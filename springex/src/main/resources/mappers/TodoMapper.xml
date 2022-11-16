@@ -13,4 +13,28 @@
         VALUES
             (#{title}, #{dueDate}, #{writer})
     </insert>
+
+    <select id="selectAll" resultType="com.kwah.springex.domain.TodoVO">
+        SELECT *
+        FROM tbl_todo
+        ORDER BY tno desc
+    </select>
+
+    <select id="selectOne" resultType="com.kwah.springex.domain.TodoVO">
+        SELECT *
+        FROM tbl_todo
+        WHERE tno = #{tno}
+    </select>
+
+    <delete id="delete">
+        DELETE
+        FROM tbl_todo
+        WHERE tno = #{tno}
+    </delete>
+
+    <update id="update">
+        UPDATE tbl_todo
+        SET title = #{title}, dueDate = #{dueDate}, finished = #{finished}
+        WHERE tno = #{tno}
+    </update>
 </mapper>
