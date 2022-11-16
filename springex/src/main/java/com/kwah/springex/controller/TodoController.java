@@ -3,6 +3,7 @@ package com.kwah.springex.controller;
 import com.kwah.springex.dto.TodoDTO;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
@@ -13,12 +14,12 @@ import java.time.LocalDate;
 public class TodoController {
 
     @RequestMapping("/list")
-    public void list() {
+    public void list(Model model) {
         log.info("todo list .....");
     }
 
-    @RequestMapping(value = "/register", method = RequestMethod.GET)
-    public void register() {
+    @RequestMapping("/register")
+    public void registerGET() {
         log.info("todo register .....");
     }
 
@@ -27,4 +28,5 @@ public class TodoController {
         log.info("POST todo register .....");
         log.info(todoDTO);
     }
+
 }
