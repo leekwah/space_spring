@@ -37,4 +37,16 @@
         SET title = #{title}, dueDate = #{dueDate}, finished = #{finished}
         WHERE tno = #{tno}
     </update>
+
+    <select id="selectList" resultType="com.kwah.springex.domain.TodoVO">
+        SELECT *
+        FROM tbl_todo
+        ORDER BY tno
+        DESC LIMIT #{skip}, #{size}
+    </select>
+
+    <select id="getCount" resultType="int">
+        SELECT COUNT(tno)
+        FROM tbl_todo
+    </select>
 </mapper>

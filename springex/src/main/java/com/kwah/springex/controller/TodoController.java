@@ -1,5 +1,6 @@
 package com.kwah.springex.controller;
 
+import com.kwah.springex.dto.PageRequestDTO;
 import com.kwah.springex.dto.TodoDTO;
 import com.kwah.springex.service.TodoService;
 import lombok.RequiredArgsConstructor;
@@ -21,10 +22,22 @@ public class TodoController {
 
     private final TodoService todoService;
 
+    /*
     @RequestMapping("/list")
     public void list(Model model) {
         log.info("todo list .....");
         model.addAttribute("dtoList", todoService.getAll());
+    }
+     */
+
+    @GetMapping("/list")
+    public void list(@Valid PageRequestDTO pageRequestDTO, BindingResult bindingResult, Model model) {
+        log.info(pageRequestDTO);
+
+        if (bindingResult.hasErrors()) {
+            pageRequestDTO = PageRequestDTO.builder().build();
+        }
+        model.addAttribute("responseDTO", todoService.getList(pageRequestDTO));
     }
 
     @RequestMapping("/register")
@@ -51,7 +64,7 @@ public class TodoController {
     }
 
     @GetMapping({"/read", "/modify"})
-    public void read(Long tno, Model model) {
+    public void read(Long tno, PageRequestDTO pageRequestDTO,Model model) {
 
         TodoDTO todoDTO = todoService.getOne(tno);
         log.info(todoDTO);

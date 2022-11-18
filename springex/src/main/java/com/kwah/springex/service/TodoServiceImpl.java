@@ -1,6 +1,8 @@
 package com.kwah.springex.service;
 
 import com.kwah.springex.domain.TodoVO;
+import com.kwah.springex.dto.PageRequestDTO;
+import com.kwah.springex.dto.PageResponseDTO;
 import com.kwah.springex.dto.TodoDTO;
 import com.kwah.springex.mapper.TodoMapper;
 import lombok.RequiredArgsConstructor;
@@ -31,6 +33,7 @@ public class TodoServiceImpl implements TodoService {
 
     }
 
+    /*
     @Override
     public List<TodoDTO> getAll() {
         // List<TodoVO>를 List<TodoDTO>로 변화하는 작업
@@ -39,6 +42,25 @@ public class TodoServiceImpl implements TodoService {
                 .collect(Collectors.toList());
 
         return dtoList;
+    }
+    */
+
+    @Override
+    public PageResponseDTO<TodoDTO> getList(PageRequestDTO pageRequestDTO) {
+        List<TodoVO> voList = todoMapper.selectList(pageRequestDTO);
+        List<TodoDTO> dtoList = voList.stream()
+                .map(vo -> modelMapper.map(vo, TodoDTO.class))
+                .collect(Collectors.toList());
+
+        int total = todoMapper.getCount(pageRequestDTO);
+
+        PageResponseDTO<TodoDTO> pageResponseDTO = PageResponseDTO.<TodoDTO>withAll()
+                .dtoList(dtoList)
+                .total(total)
+                .pageRequestDTO(pageRequestDTO)
+                .build();
+
+        return pageResponseDTO;
     }
 
     @Override
