@@ -49,8 +49,6 @@
                     </div>
                     <div class="card-body">
                         <form action="/todo/modify" method="post">
-                            <input type="hidden" name="page" value="${pageRequestDTO.page}">
-                            <input type="hidden" name="size" value="${pageRequestDTO.size}">
                         <div class="input-group mb-3">
                             <span class="input-group-text">TNO</span>
                             <input type="text" name="tno" class="form-control" value='<c:out value="${dto.tno}"></c:out>' readonly>
@@ -109,18 +107,18 @@
     console.log(serverValidResult)
 </script>
 <script>
-    const formObj = document.querySelector("form")
-
-    document.querySelector(".btn-danger").addEventListener("click", function (e){
+    document.querySelector(".btn-danger").addEventListener("click", function (e) {
         e.preventDefault()
         e.stopPropagation()
 
-        formObj.action="/todo/remove"
-        formObj.method="post"
+        formObj.action = `/todo/remove?${pageRequestDTO.link}`
+        formObj.method = "post"
 
         formObj.submit()
 
-    }, false);
+    }, false)
+</script>
+<script>
     document.querySelector(".btn-primary").addEventListener("click", function (e) {
         e.preventDefault()
         e.stopPropagation()
