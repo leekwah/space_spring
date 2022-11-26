@@ -1,6 +1,8 @@
 package com.kwah.b01.controller;
 
+import com.kwah.b01.dto.BoardDTO;
 import com.kwah.b01.dto.PageRequestDTO;
+import com.kwah.b01.dto.PageResponseDTO;
 import com.kwah.b01.service.BoardService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
@@ -18,6 +20,10 @@ public class BoardController {
 
     @GetMapping("/list")
     public void list(PageRequestDTO pageRequestDTO, Model model) {
+        PageResponseDTO<BoardDTO> responseDTO = boardService.list(pageRequestDTO);
 
+        log.info(responseDTO);
+
+        model.addAttribute("responseDTO", responseDTO);
     }
 }
