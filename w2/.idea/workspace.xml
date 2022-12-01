@@ -4,7 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9a065257-8b9c-43db-8505-6c111d4b4fe0" name="Changes" comment="쿠키, 리스너" />
+    <list default="true" id="9a065257-8b9c-43db-8505-6c111d4b4fe0" name="Changes" comment="쿠키, 리스너">
+      <change afterPath="$PROJECT_DIR$/../b01/src/main/java/com/kwah/b01/config/CustomServletConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../b01/src/main/java/com/kwah/b01/config/SwaggerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../b01/src/main/java/com/kwah/b01/controller/ReplyController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../b01/src/main/java/com/kwah/b01/controller/advice/CustomRestAdvice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../b01/src/main/java/com/kwah/b01/domain/Reply.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../b01/src/main/java/com/kwah/b01/dto/BoardListReplyCountDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../b01/src/main/java/com/kwah/b01/dto/ReplyDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../b01/src/main/java/com/kwah/b01/repository/ReplyRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../b01/src/main/java/com/kwah/b01/service/ReplyService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../b01/src/main/java/com/kwah/b01/service/ReplyServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../b01/src/main/resources/static/assets/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../b01/src/main/resources/static/js/reply.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../b01/src/test/java/com/kwah/b01/repository/ReplyRepositoryTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../b01/src/test/java/com/kwah/b01/service/ReplyServiceTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../b01/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../b01/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../b01/src/main/java/com/kwah/b01/controller/BoardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../b01/src/main/java/com/kwah/b01/controller/BoardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../b01/src/main/java/com/kwah/b01/repository/search/BoardSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/../b01/src/main/java/com/kwah/b01/repository/search/BoardSearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../b01/src/main/java/com/kwah/b01/repository/search/BoardSearchImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../b01/src/main/java/com/kwah/b01/repository/search/BoardSearchImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../b01/src/main/java/com/kwah/b01/service/BoardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../b01/src/main/java/com/kwah/b01/service/BoardService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../b01/src/main/java/com/kwah/b01/service/BoardServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../b01/src/main/java/com/kwah/b01/service/BoardServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../b01/src/main/resources/templates/board/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/../b01/src/main/resources/templates/board/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../b01/src/main/resources/templates/board/read.html" beforeDir="false" afterPath="$PROJECT_DIR$/../b01/src/main/resources/templates/board/read.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -170,6 +193,7 @@
       <workItem from="1668157915586" duration="1596000" />
       <workItem from="1668254130010" duration="4766000" />
       <workItem from="1668387020907" duration="2659000" />
+      <workItem from="1669534087078" duration="19000" />
     </task>
     <task id="LOCAL-00001" summary="로그인">
       <created>1668254467512</created>
