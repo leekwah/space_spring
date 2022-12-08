@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/api/get")
+@RequestMapping("/api2/get")
 public class GetApiController { // 원래 Get을 따로 빼내지는 않으나 실습을 위해서
 
     @GetMapping(path = "/hello") // http://localhost:9090/api/get/hello
