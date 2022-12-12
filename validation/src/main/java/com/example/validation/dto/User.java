@@ -3,14 +3,16 @@ package com.example.validation.dto;
 import com.example.validation.annotation.YearMonth;
 import org.springframework.format.annotation.DateTimeFormat;
 
+import javax.validation.Valid;
 import javax.validation.constraints.*;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.List;
 
 public class User {
     @NotBlank
     private String name;
-    @Min(value = 0)
+    @Min(value = 90)
     private int age;
     @Email
     private String email;
@@ -19,6 +21,9 @@ public class User {
 
     @YearMonth
     private String reqYearMonth; // yyyyMM
+
+    @Valid // 다른 DTO 에 Validation 을 했다고 해도, @Valid 를 적어야 정상적으로 검사를 진행한다.
+    private List<Car> cars;
 
     public String getName() {
         return name;
@@ -60,17 +65,26 @@ public class User {
         this.reqYearMonth = reqYearMonth;
     }
 
-    /* CustomValidation 를 하지 않았을 경우에는 AssertTrue 와 같은 것을 사용한다.
-    @AssertTrue(message = "yyyyMM 의 형식에 맞지 않습니다.")
-    public boolean isReqYearMonthValidation() {
-        try {
-            LocalDate localDate = LocalDate.parse(getReqYearMonth()+"01", DateTimeFormatter.ofPattern("yyyyMMdd"));
-        } catch (Exception e) {
-            return false;
-        }
-        return true;
+    public List<Car> getCars() {
+        return cars;
     }
-    */
+
+    public void setCars(List<Car> cars) {
+        this.cars = cars;
+    }
+
+    /* CustomValidation 를 하지 않았을 경우에는 AssertTrue 와 같은 것을 사용한다.
+        @AssertTrue(message = "yyyyMM 의 형식에 맞지 않습니다.")
+        public boolean isReqYearMonthValidation() {
+            try {
+                LocalDate localDate = LocalDate.parse(getReqYearMonth()+"01", DateTimeFormatter.ofPattern("yyyyMMdd"));
+            } catch (Exception e) {
+                return false;
+            }
+            return true;
+        }
+        */
+
     @Override
     public String toString() {
         return "User{" +
@@ -79,6 +93,7 @@ public class User {
                 ", email='" + email + '\'' +
                 ", phoneNumber='" + phoneNumber + '\'' +
                 ", reqYearMonth='" + reqYearMonth + '\'' +
+                ", cars=" + cars +
                 '}';
     }
 }
