@@ -12,7 +12,7 @@ import java.util.List;
 public class User {
     @NotBlank
     private String name;
-    @Min(value = 90)
+    @Min(value = 90) // 값을 90으로 설정
     private int age;
     @Email
     private String email;
