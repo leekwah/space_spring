@@ -4,70 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f68ff5de-1489-4237-8041-d72ec5abfc31" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../contoller-demo/src/main/java/com/kwah/contollerdemo/web/HttpRedirectionController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../contoller-demo/src/main/java/com/kwah/contollerdemo/web/HttpRespController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../contoller-demo/src/main/java/com/kwah/contollerdemo/web/HttpResponseJsonController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../contoller-demo/src/main/java/com/kwah/contollerdemo/web/JavaToJspController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../contoller-demo/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../contoller-demo/src/main/resources/static/a.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../contoller-demo/src/main/resources/static/css/footer.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../contoller-demo/src/main/resources/static/css/header.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../contoller-demo/src/main/resources/static/css/popular.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../contoller-demo/src/main/resources/static/css/profile.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../contoller-demo/src/main/resources/static/css/story.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../contoller-demo/src/main/resources/static/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../contoller-demo/src/main/resources/static/css/update.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../contoller-demo/src/main/resources/static/css/upload.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../contoller-demo/src/main/resources/static/images/home.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../contoller-demo/src/main/resources/static/images/logo.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../contoller-demo/src/main/resources/static/images/person.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../contoller-demo/src/main/resources/static/js/profile.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../contoller-demo/src/main/resources/static/js/story.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../contoller-demo/src/main/resources/static/js/update.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../contoller-demo/src/main/resources/static/js/upload.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../contoller-demo/src/main/resources/templates/b.mustache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../contoller-demo/src/main/webapp/WEB-INF/views/c.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../contoller-demo/src/main/webapp/WEB-INF/views/d.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../contoller-demo/src/main/webapp/WEB-INF/views/e.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../contoller-demo/src/main/webapp/WEB-INF/views/home.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../contoller-demo/src/test/java/com/kwah/photogramstart/PhotogramStartApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/config/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/domain/user/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/domain/user/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/service/AuthService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/web/AuthController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/web/dto/auth/SignupDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../contoller-demo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../contoller-demo/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../contoller-demo/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/PhotogramStartApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/ViewControllerTest.java" beforeDir="false" />
+    <list default="true" id="f68ff5de-1489-4237-8041-d72ec5abfc31" name="Changes" comment="SpringSecurity 설정, JPA 설정">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/handler/ControllerExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/handler/ex/CustomValidationException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/util/Script.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/web/dto/CMRespDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/domain/user/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/domain/user/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/web/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/web/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/web/dto/auth/SignupDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/web/dto/auth/SignupDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/auth/signup.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/auth/signup.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/cos/photogramstart/PhotogramStartApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springbootwork/.metadata/.log" beforeDir="false" afterPath="$PROJECT_DIR$/../springbootwork/.metadata/.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springbootwork/.metadata/.plugins/org.eclipse.core.resources/.root/.indexes/properties.index" beforeDir="false" afterPath="$PROJECT_DIR$/../springbootwork/.metadata/.plugins/org.eclipse.core.resources/.root/.indexes/properties.index" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springbootwork/.metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources" beforeDir="false" afterPath="$PROJECT_DIR$/../springbootwork/.metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springbootwork/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.ui.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/../springbootwork/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.ui.prefs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springbootwork/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.workbench.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/../springbootwork/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.workbench.prefs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springbootwork/.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi" beforeDir="false" afterPath="$PROJECT_DIR$/../springbootwork/.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springbootwork/.metadata/.plugins/org.eclipse.egit.core/.org.eclipse.egit.core.cmp/.project" beforeDir="false" afterPath="$PROJECT_DIR$/../springbootwork/.metadata/.plugins/org.eclipse.egit.core/.org.eclipse.egit.core.cmp/.project" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springbootwork/.metadata/.plugins/org.eclipse.egit.core/.org.eclipse.egit.core.cmp/.settings/org.eclipse.core.resources.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/../springbootwork/.metadata/.plugins/org.eclipse.egit.core/.org.eclipse.egit.core.cmp/.settings/org.eclipse.core.resources.prefs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springbootwork/.metadata/.plugins/org.eclipse.jdt.core/externalFilesCache" beforeDir="false" afterPath="$PROJECT_DIR$/../springbootwork/.metadata/.plugins/org.eclipse.jdt.core/externalFilesCache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springbootwork/.metadata/.plugins/org.eclipse.jdt.core/nonChainingJarsCache" beforeDir="false" afterPath="$PROJECT_DIR$/../springbootwork/.metadata/.plugins/org.eclipse.jdt.core/nonChainingJarsCache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springbootwork/.metadata/.plugins/org.eclipse.jdt.core/variablesAndContainers.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../springbootwork/.metadata/.plugins/org.eclipse.jdt.core/variablesAndContainers.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springbootwork/.metadata/.plugins/org.eclipse.jdt.ui/dialog_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../springbootwork/.metadata/.plugins/org.eclipse.jdt.ui/dialog_settings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springbootwork/.metadata/.plugins/org.eclipse.m2e.core/workspaceState.ser" beforeDir="false" afterPath="$PROJECT_DIR$/../springbootwork/.metadata/.plugins/org.eclipse.m2e.core/workspaceState.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springbootwork/.metadata/.plugins/org.eclipse.m2e.logback.configuration/0.log" beforeDir="false" afterPath="$PROJECT_DIR$/../springbootwork/.metadata/.plugins/org.eclipse.m2e.logback.configuration/0.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springbootwork/.metadata/.plugins/org.eclipse.pde.core/.cache/clean-cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../springbootwork/.metadata/.plugins/org.eclipse.pde.core/.cache/clean-cache.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springbootwork/.metadata/.plugins/org.eclipse.ui.ide/dialog_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../springbootwork/.metadata/.plugins/org.eclipse.ui.ide/dialog_settings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springbootwork/.metadata/.plugins/org.eclipse.ui.workbench/dialog_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../springbootwork/.metadata/.plugins/org.eclipse.ui.workbench/dialog_settings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springbootwork/.metadata/version.ini" beforeDir="false" afterPath="$PROJECT_DIR$/../springbootwork/.metadata/version.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cos/photogramstart/domain/user/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cos/photogramstart/domain/user/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cos/photogramstart/web/dto/auth/SignupDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cos/photogramstart/web/dto/auth/SignupDTO.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,8 +29,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -139,8 +91,23 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1671127595256</updated>
-      <workItem from="1671127596398" duration="3645000" />
+      <workItem from="1671127596398" duration="8131000" />
     </task>
+    <task id="LOCAL-00001" summary="SpringSecurity 설정, JPA 설정">
+      <created>1671131336399</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1671131336399</updated>
+    </task>
+    <task id="LOCAL-00002" summary="SpringSecurity 설정, JPA 설정">
+      <created>1671131355089</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1671131355089</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -156,5 +123,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="SpringSecurity 설정, JPA 설정" />
+    <option name="LAST_COMMIT_MESSAGE" value="SpringSecurity 설정, JPA 설정" />
   </component>
 </project>

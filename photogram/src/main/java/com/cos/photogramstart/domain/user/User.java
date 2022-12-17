@@ -20,13 +20,16 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY) // 번호 증가 전략이 DB 를 따라간다.
     private int id; // 엄청 큰 대형회사일 경우에는 Long 을 사용
 
-    @Column(unique = true) // 제약조건이 걸린 것이다. 동일한 값이 저장하지 못한다.
+    @Column(length = 20, unique = true) // 제약조건이 걸린 것이다. 동일한 값이 저장하지 못한다. UniqueKey 설정
     private String username;
+    @Column(nullable = false) // null 불가능
     private String password;
 
+    @Column(nullable = false)
     private String name;
     private String website;
     private String bio;
+    @Column(nullable = false)
     private String email;
     private String phone;
     private String gender;
