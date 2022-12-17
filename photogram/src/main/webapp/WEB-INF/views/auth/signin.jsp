@@ -24,7 +24,8 @@
                         <h1><img src="/images/logo.jpg" alt=""></h1>
                         
                         <!--로그인 인풋-->
-                        <form class="login__input" >
+                        <form class="login__input" action="/auth/signin" method="post">
+                        <%-- 로그인은 POST 를 쓴다. (주소창에 값을 노출시키지 않기 위해서) --%>
                             <input type="text" name="username" placeholder="유저네임" required="required" />
                             <input type="password" name="password" placeholder="비밀번호" required="required" />
                             <button>로그인</button>

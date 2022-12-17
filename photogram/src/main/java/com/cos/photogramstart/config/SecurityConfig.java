@@ -36,7 +36,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .permitAll()
                 .and()
                 .formLogin()
-                .loginPage("/auth/signin")
+                .loginPage("/auth/signin") // GET 방식 (인증이 안되어 있을 경우)
+                .loginProcessingUrl("/auth/signin") // POST 방식 (인증이 될 경우) -> Spring Security 가 로그인 프로세스 진행
                 .defaultSuccessUrl("/");
     }
 }
