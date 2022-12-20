@@ -4,15 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f68ff5de-1489-4237-8041-d72ec5abfc31" name="Changes" comment="Auth 완료">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/web/ImageController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/web/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/web/api/UserApiController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/web/dto/user/UserUpdateDto.java" afterDir="false" />
+    <list default="true" id="f68ff5de-1489-4237-8041-d72ec5abfc31" name="Changes" comment="ajax">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/service/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/web/api/UserApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/web/api/UserApiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/web/dto/user/UserUpdateDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/web/dto/user/UserUpdateDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/update.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/update.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/layout/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/layout/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/update.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/update.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/static/js/update.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/update.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -88,7 +85,8 @@
       <updated>1671127595256</updated>
       <workItem from="1671127596398" duration="8412000" />
       <workItem from="1671294876897" duration="4275000" />
-      <workItem from="1671369508115" duration="3615000" />
+      <workItem from="1671369508115" duration="4232000" />
+      <workItem from="1671505956895" duration="1855000" />
     </task>
     <task id="LOCAL-00001" summary="SpringSecurity 설정, JPA 설정">
       <created>1671131336399</created>
@@ -118,7 +116,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671297798325</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="ajax">
+      <created>1671450299289</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1671450299289</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -139,6 +144,7 @@
     <MESSAGE value="SpringSecurity 설정, JPA 설정" />
     <MESSAGE value="CustomValidationException 생성" />
     <MESSAGE value="Auth 완료" />
-    <option name="LAST_COMMIT_MESSAGE" value="Auth 완료" />
+    <MESSAGE value="ajax" />
+    <option name="LAST_COMMIT_MESSAGE" value="ajax" />
   </component>
 </project>
