@@ -1,5 +1,7 @@
 // (1) 회원정보 수정
-function update(userId) {
+function update(userId, event) {
+    event.preventDefault(); // 폼 태그 액션을 막는 것
+
     // profileUpdate 는 form 의  id 값을 의미한다.
     // serialize() 를 하면, 모든 값들이 데이터화 된다.
     let data = $("#profileUpdate").serialize();
@@ -10,11 +12,10 @@ function update(userId) {
         data:data,
         contentType:"application/x-www-form-urlencoded; charset=utf-8",
         dataType:"json"
-    }).done(res => {
-        console.log("update 성공");
-        // 성공시에 페이지 이동
-        location.href=`/user/${userId}`
-    }).fail(error => {
-        console.log("update 실패");
+    }).done(res => { // HttpStatus 상태코드 200번대면 성공
+        console.log("update 성공", res);
+        location.href=`/user/${userId}` // 성공시에 페이지 이동
+    }).fail(error => { // HttpStatus 상태코드 200번대가 아닐 때
+        alert(JSON.stringify(error.responseJSON.data)); // Object 를 문자열로 바꾼 뒤에, alert 로 보낸다.
     })
 }
