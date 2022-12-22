@@ -12,11 +12,10 @@ function update(userId, event) {
         data:data,
         contentType:"application/x-www-form-urlencoded; charset=utf-8",
         dataType:"json"
-    }).done(res => {
+    }).done(res => { // HttpStatus 상태코드 200번대면 성공
         console.log("update 성공", res);
-        // 성공시에 페이지 이동
-        location.href=`/user/${userId}`
-    }).fail(error => {
-        console.log("update 실패", error);
+        location.href=`/user/${userId}` // 성공시에 페이지 이동
+    }).fail(error => { // HttpStatus 상태코드 200번대가 아닐 때
+        alert(JSON.stringify(error.responseJSON.data)); // Object 를 문자열로 바꾼 뒤에, alert 로 보낸다.
     })
 }
