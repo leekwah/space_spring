@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f68ff5de-1489-4237-8041-d72ec5abfc31" name="Changes" comment="유효성 검사">
+    <list default="true" id="f68ff5de-1489-4237-8041-d72ec5abfc31" name="Changes" comment="IllegalArgumentException">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/handler/ex/CustomValidationApiException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/handler/ex/CustomValidationApiException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/update.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/update.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +89,7 @@
       <workItem from="1671127596398" duration="8412000" />
       <workItem from="1671294876897" duration="4275000" />
       <workItem from="1671369508115" duration="4232000" />
-      <workItem from="1671505956895" duration="5845000" />
+      <workItem from="1671505956895" duration="6755000" />
     </task>
     <task id="LOCAL-00001" summary="SpringSecurity 설정, JPA 설정">
       <created>1671131336399</created>
@@ -138,7 +140,21 @@
       <option name="project" value="LOCAL" />
       <updated>1671615342373</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="IllegalArgumentException">
+      <created>1671708609308</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1671708609308</updated>
+    </task>
+    <task id="LOCAL-00009" summary="IllegalArgumentException">
+      <created>1671708614425</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1671708614425</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -162,6 +178,7 @@
     <MESSAGE value="ajax" />
     <MESSAGE value="회원정보 수정" />
     <MESSAGE value="유효성 검사" />
-    <option name="LAST_COMMIT_MESSAGE" value="유효성 검사" />
+    <MESSAGE value="IllegalArgumentException" />
+    <option name="LAST_COMMIT_MESSAGE" value="IllegalArgumentException" />
   </component>
 </project>

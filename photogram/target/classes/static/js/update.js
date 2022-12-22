@@ -16,6 +16,11 @@ function update(userId, event) {
         console.log("update 성공", res);
         location.href=`/user/${userId}` // 성공시에 페이지 이동
     }).fail(error => { // HttpStatus 상태코드 200번대가 아닐 때
-        alert(JSON.stringify(error.responseJSON.data)); // Object 를 문자열로 바꾼 뒤에, alert 로 보낸다.
-    })
+        // errormap 에 data 가 null 이면 오류가 뜰 수 있다.
+        if (error.data == null) { // 그렇기 때문에, if 문으로 설정한다.
+            alert(error.responseJSON.message);
+        } else {
+            alert(JSON.stringify(error.responseJSON.data)); // Object 를 문자열로 바꾼 뒤에, alert 로 보낸다.
+        }
+    });
 }

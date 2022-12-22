@@ -2,6 +2,7 @@ package com.cos.photogramstart.service;
 
 import com.cos.photogramstart.domain.user.User;
 import com.cos.photogramstart.domain.user.UserRepository;
+import com.cos.photogramstart.handler.ex.CustomValidationApiException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -19,8 +20,11 @@ public class UserService {
     @Transactional
     public User 회원수정(int id, User user) {
         // 1. 영속화
+        // id 가 있는 경우
         // User userEntity = userRepository.findById(id).get();
-        User userEntity = userRepository.findById(10).orElseThrow(() -> {return new IllegalArgumentException("찾을 수 없는 id 입니다.");});
+
+        // id 가 없는 경우에 예외 처리
+        User userEntity = userRepository.findById(id).orElseThrow(() -> {return new CustomValidationApiException("찾을 수 없는 id 입니다.");});
         // Optional
         // (1) 무조건 찾음 -> get()
         // (2) 못찾으면 Exception 발동시킴 -> orElseThrow
