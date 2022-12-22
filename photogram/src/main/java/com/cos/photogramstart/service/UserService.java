@@ -7,6 +7,8 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.function.Supplier;
+
 @Service
 @RequiredArgsConstructor
 public class UserService {
@@ -17,7 +19,8 @@ public class UserService {
     @Transactional
     public User 회원수정(int id, User user) {
         // 1. 영속화
-        User userEntity = userRepository.findById(id).get();
+        // User userEntity = userRepository.findById(id).get();
+        User userEntity = userRepository.findById(10).orElseThrow(() -> {return new IllegalArgumentException("찾을 수 없는 id 입니다.");});
         // Optional
         // (1) 무조건 찾음 -> get()
         // (2) 못찾으면 Exception 발동시킴 -> orElseThrow
