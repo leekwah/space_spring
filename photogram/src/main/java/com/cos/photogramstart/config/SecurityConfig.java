@@ -24,13 +24,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
         // 인증이 되지 않은 사용자는 전부 login 으로 가게 한다.
         // anMatchers 에 적힌 주소들은 전부 403 을 뜨게 한다. (권한 없음)
-        // 이후에 로그인이 되지 않은 (권한이 없는) 경우에는 /auth/signin 으로 가게 한다.
-        // 로그인이 된 경우에는 / 으로 가게 한다.
+        // 이후에 로그인이 되지 않은 (권한이 없는) 경우에는 "/auth/signin" 으로 가게 한다.
+        // 로그인이 된 경우에 "/" 으로 가게 한다.
 
         http.csrf().disable(); // scrf 기능을 비활성화 한다. (추후 JavaScript 등과 같은 걸 할 때 힘듦)
 
         http.authorizeRequests()
-                .antMatchers("/", "/user/**", "/image/**", "/subscribe/**", "/comment/**")
+                .antMatchers("/", "/user/**", "/image/**", "/subscribe/**", "/comment/**", "/api/**")
                 .authenticated()
                 .anyRequest()
                 .permitAll()

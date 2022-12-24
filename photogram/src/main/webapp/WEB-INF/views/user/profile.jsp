@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-
 <%@ include file="../layout/header.jsp"%>
 
 <!--프로필 섹션-->
@@ -26,7 +25,7 @@
 		<!--유저정보 및 사진등록 구독하기-->
 		<div class="profile-right">
 			<div class="name-group">
-				<h2>TherePrograming</h2>
+				<h2>${user.name}</h2>
 
 				<button class="cta" onclick="location.href='/image/upload'">사진등록</button>
 				<button class="cta" onclick="toggleSubscribe(this)">구독하기</button>
@@ -44,12 +43,11 @@
 				</ul>
 			</div>
 			<div class="state">
-				<h4>자기 소개입니다.</h4>
-				<h4>https://github.com/codingspecialist</h4>
+				<h4>${user.bio}</h4>
+				<h4>${user.website}</h4>
 			</div>
 		</div>
 		<!--유저정보 및 사진등록 구독하기-->
-
 	</div>
 </section>
 
@@ -63,35 +61,17 @@
 			<div class="tab-1-content-inner">
 
 				<!--아이템들-->
-
-
+				<c:forEach var="image" items="${user.images}"> <!-- JSTL 의 EL 표현식에서 변수명을 적으면 get 함수가 자동 호출된다. -->
 				<div class="img-box">
-					<a href=""> <img src="/images/home.jpg" />
+					<a href=""> <img src="/upload/${image.postImageUrl}" /> <!-- upload 경로 폴더가 없으면 엑박이 뜨게 된다. -->
+					<!-- WebMvcConfig 에 적은 내용을 보면, 이 Config 가 해당 주소를 낚아챈다. -->
 					</a>
 					<div class="comment">
 						<a href="#" class=""> <i class="fas fa-heart"></i><span>0</span>
 						</a>
 					</div>
 				</div>
-
-				<div class="img-box">
-					<a href=""> <img src="/images/home.jpg" />
-					</a>
-					<div class="comment">
-						<a href="#" class=""> <i class="fas fa-heart"></i><span>0</span>
-						</a>
-					</div>
-				</div>
-
-				<div class="img-box">
-					<a href=""> <img src="/images/home.jpg" />
-					</a>
-					<div class="comment">
-						<a href="#" class=""> <i class="fas fa-heart"></i><span>0</span>
-						</a>
-					</div>
-				</div>
-
+				</c:forEach>
 				<!--아이템들end-->
 			</div>
 		</div>
