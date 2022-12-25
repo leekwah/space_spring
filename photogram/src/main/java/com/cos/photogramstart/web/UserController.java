@@ -17,12 +17,12 @@ import org.springframework.web.bind.annotation.PathVariable;
 @RequiredArgsConstructor
 public class UserController {
 
-    private UserService userService;
+    private final UserService userService;
 
     @GetMapping("/user/{id}")
     public String profile(@PathVariable int id, Model model) {
         User userEntity = userService.회원프로필(id);
-        model.addAttribute("user", userEntity);
+        model.addAttribute("user",userEntity);
         return "/user/profile";
     }
 
@@ -37,8 +37,6 @@ public class UserController {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         PrincipalDetails mPrincipalDetails = (PrincipalDetails) auth.getPrincipal();
         System.out.println("직접 찾은 세션 정보 : " + mPrincipalDetails.getUser());
-
-
 
         // 세션 정보를 모델에 넣는 방법 -> 원래는 주석처리한 것을 해야하나, <sec:Authorize> 를 통해서 한다.
         model.addAttribute("principal", principalDetails.getUser());

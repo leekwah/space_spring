@@ -4,74 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f68ff5de-1489-4237-8041-d72ec5abfc31" name="Changes" comment="id 가 없는 경우에 예외 처리">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/config/WebMvcConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/domain/image/Image.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/domain/image/ImageRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/domain/subscribe/Subscribe.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/domain/subscribe/SubscribeRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/handler/ex/CustomApiException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/handler/ex/CustomException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/service/ImageService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/service/SubscribeService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/web/api/SubscribeApiController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/web/dto/image/ImageUploadDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0c99891e-e6f6-4689-b66f-11eaa3eb09e5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/0c99891e-e6f6-4689-b66f-11eaa3eb09e5.xml" afterDir="false" />
+    <list default="true" id="f68ff5de-1489-4237-8041-d72ec5abfc31" name="Changes" comment="구독 기능 추가">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/domain/image/Image.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/domain/image/Image.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/domain/user/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/domain/user/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/handler/ControllerExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/handler/ControllerExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/service/ImageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/service/ImageService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/web/ImageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/web/ImageController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/web/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/web/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/image/upload.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/image/upload.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/profile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/profile.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cos/photogramstart/config/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cos/photogramstart/config/SecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cos/photogramstart/domain/user/User$UserBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cos/photogramstart/domain/user/User$UserBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/layout/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/layout/header.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cos/photogramstart/domain/image/Image.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cos/photogramstart/domain/image/Image.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/cos/photogramstart/domain/user/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cos/photogramstart/domain/user/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cos/photogramstart/handler/ControllerExceptionHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cos/photogramstart/handler/ControllerExceptionHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cos/photogramstart/service/ImageService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cos/photogramstart/service/ImageService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/cos/photogramstart/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cos/photogramstart/service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cos/photogramstart/web/ImageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cos/photogramstart/web/ImageController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/cos/photogramstart/web/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cos/photogramstart/web/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../upload/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../upload/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../upload/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../upload/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../upload/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../upload/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../upload/src/main/java/com/kwah/b01/UploadApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../upload/src/main/java/com/kwah/b01/config/CustomServletConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../upload/src/main/java/com/kwah/b01/config/RootConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../upload/src/main/java/com/kwah/b01/config/SwaggerConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../upload/src/main/java/com/kwah/b01/controller/BoardController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../upload/src/main/java/com/kwah/b01/controller/ReplyController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../upload/src/main/java/com/kwah/b01/controller/SampleController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../upload/src/main/java/com/kwah/b01/controller/SampleJSONController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../upload/src/main/java/com/kwah/b01/controller/UpDownController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../upload/src/main/java/com/kwah/b01/controller/advice/CustomRestAdvice.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../upload/src/main/java/com/kwah/b01/domain/BaseEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../upload/src/main/java/com/kwah/b01/domain/Board.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../upload/src/main/java/com/kwah/b01/domain/BoardImage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../upload/src/main/java/com/kwah/b01/domain/Reply.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../upload/src/main/java/com/kwah/b01/dto/BoardDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../upload/src/main/java/com/kwah/b01/dto/BoardListReplyCountDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../upload/src/main/java/com/kwah/b01/dto/PageRequestDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../upload/src/main/java/com/kwah/b01/dto/PageResponseDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../upload/src/main/java/com/kwah/b01/dto/ReplyDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../upload/src/main/java/com/kwah/b01/dto/upload/UploadFileDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../upload/src/main/java/com/kwah/b01/dto/upload/UploadResultDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../upload/src/main/java/com/kwah/b01/repository/BoardRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../upload/src/main/java/com/kwah/b01/repository/ReplyRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../upload/src/main/java/com/kwah/b01/repository/search/BoardSearch.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../upload/src/main/java/com/kwah/b01/repository/search/BoardSearchImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../upload/src/main/java/com/kwah/b01/service/BoardService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../upload/src/main/java/com/kwah/b01/service/BoardServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../upload/src/main/java/com/kwah/b01/service/ReplyService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../upload/src/main/java/com/kwah/b01/service/ReplyServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../upload/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../upload/src/test/java/com/kwah/b01/UploadApplicationTests.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,26 +53,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/kwah/Downloads/GitHub/spring/photogram",
-    "spring.configuration.checksum": "eae33cdd930e56087fcbc4543367dac1"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/kwah/Downloads/GitHub/spring/photogram&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;eae33cdd930e56087fcbc4543367dac1&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mariadb"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mariadb&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.cos.photogramstart.handler.ex" />
@@ -155,6 +100,8 @@
       <workItem from="1671369508115" duration="4232000" />
       <workItem from="1671505956895" duration="8594000" />
       <workItem from="1671728916880" duration="10488000" />
+      <workItem from="1671883591995" duration="40000" />
+      <workItem from="1671936511250" duration="1156000" />
     </task>
     <task id="LOCAL-00001" summary="SpringSecurity 설정, JPA 설정">
       <created>1671131336399</created>
@@ -231,6 +178,17 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="Space.CommitStatus" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">

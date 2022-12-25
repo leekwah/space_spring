@@ -19,11 +19,10 @@ public class UserService {
     private final BCryptPasswordEncoder bCryptPasswordEncoder;
 
     public User 회원프로필(int userId) {
-        // SELECT * FROM image HWER userId = :userId; 를 JPA 로 이용
+        // SELECT * FROM image WHERE userId = :userId; 를 JPA 로 이용
         User userEntity = userRepository.findById(userId).orElseThrow(() -> {
-           throw new CustomException("해당 프로필 페이지는 없는 페이지입니다.");
+            throw new CustomException("해당 프로필 페이지는 없는 페이지입니다.");
         });
-
         return userEntity; // 유저의 정보
     }
 
