@@ -19,7 +19,7 @@ spring:
     password: kwah
     
   jpa:
-    open-in-view: true
+    open-in-view: true # false 로 바꾸면, 세션이 컨트롤러에서 서비스로 갈 때 종료된다.
     hibernate:
       ddl-auto: update # create 로 바꾸면, insert 데이터들이 다 날아간다.
       naming:
