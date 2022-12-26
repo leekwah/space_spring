@@ -22,6 +22,7 @@ public class UserController {
     @GetMapping("/user/{id}")
     public String profile(@PathVariable int id, Model model) {
         User userEntity = userService.회원프로필(id);
+
         model.addAttribute("user",userEntity);
         return "/user/profile";
     }
@@ -29,7 +30,7 @@ public class UserController {
     @GetMapping("/user/{id}/update")
     public String update(@PathVariable int id, @AuthenticationPrincipal PrincipalDetails principalDetails) { // @@AuthenticationPrincipal 을 통해 Authentication 객체에 바로 접근할 수 있다.
         // 1번 방법 @AuthenticationPrincipal 를 이용하는 것 - 추천
-        System.out.println("세션 정보 : " + principalDetails.getUser()); // session 내의 user 정보를 얻는다.
+        // System.out.println("세션 정보 : " + principalDetails.getUser()); // session 내의 user 정보를 얻는다.
 
         /*
 

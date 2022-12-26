@@ -3,6 +3,7 @@ package com.cos.photogramstart.domain.user;
 // JPA 를 사용하고 있다. - Java Persistence API (자바로 데이터를 영구적으로(DB) 저장할 수 있는 API 를 제공)
 
 import com.cos.photogramstart.domain.image.Image;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -41,6 +42,7 @@ public class User {
 
     // 양방향 매핑
     @OneToMany(mappedBy = "user", fetch = FetchType.LAZY) // 한 명의 유저는 여러가지 이미지를 가질 수 있기에 @OneToMany
+    @JsonIgnoreProperties("{user}") // 내부에 있는 user 는 무시하고 파싱을 한다. (JPA 무한 참조 방지)
     private List<Image> images; // 컬렉션이 들어가는 타입이 필요한데, 없음
     // mappedBy = "user" 는 내가 연관관계 주인이 아니라는 뜻, 그러므로 테이블에 컬럼 생성 X, 그리고, "user" 는 이미지에 있는 변수와 동일해야한다.
     // User 를 SELECT 할 때, 해당 User id 로 등록된 image 를 다 가져오라는 뜻 - 대신 getImages() 함수가 호출될 때 가져오라는 것

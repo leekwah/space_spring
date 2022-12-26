@@ -37,9 +37,6 @@ public class UserApiController {
 
             for (FieldError error : bindingResult.getFieldErrors()) {
                 errorMap.put(error.getField(), error.getDefaultMessage());
-                System.out.println("==================================================");
-                System.out.println(error.getDefaultMessage());
-                System.out.println("==================================================");
             }
             throw new CustomValidationApiException("유효성 검사 실패함", errorMap);
         } else { // 정상일 경우에
@@ -47,7 +44,8 @@ public class UserApiController {
 
             // 이후에 세션 정보를 바꿔야지 적용됨 -> principalDetails 활용
             principalDetails.setUser(userEntity);
-            return new CMRespDto<>(1, "회원 수정 완료", userEntity);
+            return new CMRespDto<>(1, "회원 수정 완료", userEntity); // 응답시에 userEntity 의 모든 getter 함수가 호출되고 JSON 으로 파싱하여 응답한다.
+            // 내부로 또 파싱하는 걸 막아야한다. (@JsonIgnoreProperties("{user}") 를 User.java 에 추가한다.)
         }
     }
 }

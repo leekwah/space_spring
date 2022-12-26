@@ -18,6 +18,7 @@ public class UserService {
     private final UserRepository userRepository;
     private final BCryptPasswordEncoder bCryptPasswordEncoder;
 
+    @Transactional(readOnly = true) // SELECT 문의 트랜잭션은 (readOnly = true) 를 건다.
     public User 회원프로필(int userId) {
         // SELECT * FROM image WHERE userId = :userId; 를 JPA 로 이용
         User userEntity = userRepository.findById(userId).orElseThrow(() -> {
