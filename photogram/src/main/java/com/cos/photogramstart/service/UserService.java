@@ -1,10 +1,13 @@
 package com.cos.photogramstart.service;
 
+import com.cos.photogramstart.config.auth.PrincipalDetails;
 import com.cos.photogramstart.domain.user.User;
 import com.cos.photogramstart.domain.user.UserRepository;
 import com.cos.photogramstart.handler.ex.CustomException;
 import com.cos.photogramstart.handler.ex.CustomValidationApiException;
+import com.cos.photogramstart.web.dto.user.UserProfileDto;
 import lombok.RequiredArgsConstructor;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -19,12 +22,19 @@ public class UserService {
     private final BCryptPasswordEncoder bCryptPasswordEncoder;
 
     @Transactional(readOnly = true) // SELECT 문의 트랜잭션은 (readOnly = true) 를 건다.
-    public User 회원프로필(int userId) {
+    public UserProfileDto 회원프로필(int pageUserId, int principalId) { // pageUserId 는 해당 페이지의 아이디, principalId 는 로그인한 사용자 아이디
+        UserProfileDto dto = new UserProfileDto();
+
         // SELECT * FROM image WHERE userId = :userId; 를 JPA 로 이용
-        User userEntity = userRepository.findById(userId).orElseThrow(() -> {
+        User userEntity = userRepository.findById(pageUserId).orElseThrow(() -> {
             throw new CustomException("해당 프로필 페이지는 없는 페이지입니다.");
         });
-        return userEntity; // 유저의 정보
+
+        dto.setUser(userEntity);
+        dto.setImageCount(userEntity.getImages().size());
+        dto.setPageOwnerState(pageUserId == principalId); // true 면 주인, false 면 아니다.
+
+        return dto; // 유저의 정보
     }
 
     @Transactional
