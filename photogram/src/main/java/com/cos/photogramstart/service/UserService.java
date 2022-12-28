@@ -1,6 +1,7 @@
 package com.cos.photogramstart.service;
 
 import com.cos.photogramstart.config.auth.PrincipalDetails;
+import com.cos.photogramstart.domain.subscribe.SubscribeRepository;
 import com.cos.photogramstart.domain.user.User;
 import com.cos.photogramstart.domain.user.UserRepository;
 import com.cos.photogramstart.handler.ex.CustomException;
@@ -19,6 +20,7 @@ import java.util.function.Supplier;
 public class UserService {
 
     private final UserRepository userRepository;
+    private final SubscribeRepository subscribeRepository;
     private final BCryptPasswordEncoder bCryptPasswordEncoder;
 
     @Transactional(readOnly = true) // SELECT 문의 트랜잭션은 (readOnly = true) 를 건다.
@@ -33,6 +35,12 @@ public class UserService {
         dto.setUser(userEntity);
         dto.setImageCount(userEntity.getImages().size());
         dto.setPageOwnerState(pageUserId == principalId); // true 면 주인, false 면 아니다.
+
+        int subscribeState = subscribeRepository.mSebscribeState(principalId, pageUserId);
+        int subscribeCount = subscribeRepository.mSubScribeCount(pageUserId);
+
+        dto.setSubscribeState(subscribeState == 1);
+        dto.setSubscribeCount(subscribeCount);
 
         return dto; // 유저의 정보
     }
