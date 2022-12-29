@@ -18,4 +18,6 @@ public interface SubscribeRepository extends JpaRepository<Subscribe, Integer> {
 
     @Query(value = "SELECT COUNT(*) FROM subscribe WHERE fromUserId = :pageUserId", nativeQuery = true)
     int mSubScribeCount(int pageUserId); // 구독자 수를 알 수 있음
+
+    // Subscribe 모델이 아닌 것은 쿼리 사용 불가능
 }
