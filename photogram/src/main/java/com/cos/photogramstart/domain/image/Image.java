@@ -1,6 +1,7 @@
 package com.cos.photogramstart.domain.image;
 
 import com.cos.photogramstart.domain.user.User;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -23,6 +24,7 @@ public class Image {
 
     @ManyToOne // 1명의 User 는 N 개의 이미지 O, 1개의 이미지는 N 의 유저는 X => N : 1 의 관계
     @JoinColumn(name = "userId") // user 가 DB 에 저장하게 될 때, 문제가 됨 -> FK 키로 저장됨
+    @JsonIgnoreProperties({"images"}) // images 는 무시해라는 뜻
     private User user; // 누가 업로드 한지 알아야 하기 때문에
 
 

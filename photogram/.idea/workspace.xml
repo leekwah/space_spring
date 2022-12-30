@@ -4,14 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f68ff5de-1489-4237-8041-d72ec5abfc31" name="Changes" comment="구독기능 확인">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/web/dto/subscirbe/SubscribeDto.java" afterDir="false" />
+    <list default="true" id="f68ff5de-1489-4237-8041-d72ec5abfc31" name="Changes" comment="ajax 구독, 구독취소 버튼 활성화">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/web/api/ImageApiController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/domain/subscribe/SubscribeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/domain/subscribe/SubscribeRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/service/SubscribeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/service/SubscribeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/web/api/UserApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/web/api/UserApiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/domain/image/Image.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/domain/image/Image.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/domain/image/ImageRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/domain/image/ImageRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/service/ImageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/service/ImageService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/story.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/story.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/profile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/profile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/profile.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/story.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/story.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/image/story.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/image/story.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cos/photogramstart/domain/image/Image$ImageBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cos/photogramstart/domain/image/Image$ImageBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cos/photogramstart/domain/image/Image.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cos/photogramstart/domain/image/Image.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cos/photogramstart/domain/image/ImageRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cos/photogramstart/domain/image/ImageRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cos/photogramstart/service/ImageService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cos/photogramstart/service/ImageService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cos/photogramstart/service/SubscribeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cos/photogramstart/service/SubscribeService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cos/photogramstart/web/api/UserApiController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cos/photogramstart/web/api/UserApiController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/story.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/story.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/profile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/story.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/story.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +111,8 @@
       <workItem from="1672060948684" duration="2790000" />
       <workItem from="1672139257441" duration="4972000" />
       <workItem from="1672225578898" duration="968000" />
-      <workItem from="1672304271825" duration="6374000" />
+      <workItem from="1672304271825" duration="11094000" />
+      <workItem from="1672323541746" duration="2157000" />
     </task>
     <task id="LOCAL-00001" summary="SpringSecurity 설정, JPA 설정">
       <created>1671131336399</created>
@@ -207,7 +219,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672225614913</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="ajax 구독, 구독취소 버튼 활성화">
+      <created>1672318406966</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1672318406966</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -249,6 +268,7 @@
     <MESSAGE value="프로필 설정기능" />
     <MESSAGE value="기본 프로필 기능 완성" />
     <MESSAGE value="구독기능 확인" />
-    <option name="LAST_COMMIT_MESSAGE" value="구독기능 확인" />
+    <MESSAGE value="ajax 구독, 구독취소 버튼 활성화" />
+    <option name="LAST_COMMIT_MESSAGE" value="ajax 구독, 구독취소 버튼 활성화" />
   </component>
 </project>
