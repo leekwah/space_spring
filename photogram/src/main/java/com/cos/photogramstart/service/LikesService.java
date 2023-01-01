@@ -20,5 +20,4 @@ public class LikesService {
     public void 좋아요취소(int imageId, int principalId) {
         likesRepository.mUnLikes(imageId, principalId);
     }
-
 }

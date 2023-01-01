@@ -14,8 +14,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
-
 @RestController
 @RequiredArgsConstructor
 public class ImageApiController {
@@ -29,17 +27,16 @@ public class ImageApiController {
         return new ResponseEntity<>(new CMRespDto<>(1, "성공", images), HttpStatus.OK);
     }
 
-    // 좋아요기능
-    @PostMapping("/api/image/{imageId}/likes") // 어떤 이미지를 좋아요 하기 때문에, 다음과 같은 주소가 나오게 된다.
-    public ResponseEntity<?> likes(@AuthenticationPrincipal PrincipalDetails principalDetails, @PathVariable int imageId) {
+    @PostMapping("/api/{imageId}/likes")
+    public ResponseEntity<?> likes(@PathVariable int imageId, @AuthenticationPrincipal PrincipalDetails principalDetails) {
         likesService.좋아요(imageId, principalDetails.getUser().getId());
-        return new ResponseEntity<>(new CMRespDto<>(1, "좋아요 성공", null), HttpStatus.CREATED);
+        return new ResponseEntity<>(new CMRespDto<>(1, "좋아요 완료", null), HttpStatus.CREATED);
     }
-    // 좋아요 취소
-    @DeleteMapping("/api/image/{imageId}/likes") // 어떤 이미지를 좋아요 하기 때문에, 다음과 같은 주소가 나오게 된다.
-    public ResponseEntity<?> unLikes(@AuthenticationPrincipal PrincipalDetails principalDetails, @PathVariable int imageId) {
+
+    @DeleteMapping("/api/{imageId}/likes")
+    public ResponseEntity<?> unLikes(@PathVariable int imageId, @AuthenticationPrincipal PrincipalDetails principalDetails) {
         likesService.좋아요취소(imageId, principalDetails.getUser().getId());
-        return new ResponseEntity<>(new CMRespDto<>(1, "좋아요취소 성공", null), HttpStatus.OK);
+        return new ResponseEntity<>(new CMRespDto<>(1, "좋아요취소 완료", null), HttpStatus.OK);
     }
 
 }
