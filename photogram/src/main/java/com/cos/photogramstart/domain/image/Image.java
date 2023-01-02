@@ -1,5 +1,6 @@
 package com.cos.photogramstart.domain.image;
 
+import com.cos.photogramstart.domain.likes.Likes;
 import com.cos.photogramstart.domain.user.User;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
@@ -9,6 +10,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity // DB 에 테이블을 생성
 @Data
@@ -28,8 +30,16 @@ public class Image {
     private User user; // 누가 업로드 한지 알아야 하기 때문에
 
 
-    // 이미지 좋아요 정보 필요함
+    // 이미지 좋아요
+    // 정보 필요함 -> 양방향 매핑
+    @OneToMany(mappedBy = "image") // likes 의 image 변수 이름
+    private List<Likes> likes; // Image 를 선택할 때 Likes 도 같이 가져오게 된다.
+
+    @Transient // DB 에 컬럼이 만들어지지 않는다.
+    private boolean likeState;
+
     // 이미지 댓글 정보 필요함
+
 
     private LocalDateTime createDate;
 
