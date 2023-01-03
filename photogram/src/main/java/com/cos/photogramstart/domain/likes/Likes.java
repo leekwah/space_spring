@@ -29,12 +29,14 @@ public class Likes { // Like 가 MariaDB 나 MySQL 에 있기 때문에
     @GeneratedValue(strategy = GenerationType.IDENTITY) // 번호 증가 전략이 DB 를 따라간다.
     private int id; // 엄청 큰 대형회사일 경우에는 Long 을 사용
 
+    // 무한 참조됨
+    // 안되게 하려면, Image 를 리턴할 때, Likes 를 리턴하게되고, likes 가 images 를 리턴 못하게 해야한다.
     @JoinColumn(name = "imageId")
     @ManyToOne // 하나의 이미지는 여러개의 좋아요가 있을 수 있음
     // @ManyToOne 은 Fetch.EAGER 전략이다.
     private Image image;
 
-    // 위에 Image 를 가져오기 때문에, 추후에 안되게 함
+    // 위에 Image 를 가져오기 때문에, 추후에 안되게 함 (무한참조)
     @JoinColumn(name = "userId")
     @ManyToOne
     private User user;

@@ -32,6 +32,7 @@ public class Image {
 
     // 이미지 좋아요
     // 정보 필요함 -> 양방향 매핑
+    @JsonIgnoreProperties({"image"}) // 무한 참조 방지
     @OneToMany(mappedBy = "image") // likes 의 image 변수 이름
     private List<Likes> likes; // Image 를 선택할 때 Likes 도 같이 가져오게 된다.
 
