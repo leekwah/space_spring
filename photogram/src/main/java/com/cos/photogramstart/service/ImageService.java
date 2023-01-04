@@ -53,6 +53,11 @@ public class ImageService {
 
         // images 에 좋아요 상태 담기
         images.forEach((image) -> {
+
+            // 좋아요 개수 담기
+            image.setLikeCount(image.getLikes().size());
+
+
             // image 하나가 가지고 있는 like 정보 가져오기
             // 이중 for 문
             image.getLikes().forEach((like) -> {
