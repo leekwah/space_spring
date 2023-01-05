@@ -6,6 +6,4 @@ import org.springframework.data.jpa.repository.JpaRepository;
 public interface UserRepository extends JpaRepository<User, Integer> { // JpaRepository<Object, PK> 를 적는다.
     // JPA query method 사용 (Query Creation)
     User findByUsername(String username);
-
-
 }

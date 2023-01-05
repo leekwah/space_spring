@@ -43,10 +43,6 @@ public class Likes { // Like 가 MariaDB 나 MySQL 에 있기 때문에
 
     private LocalDateTime createDate;
 
-    /*
-        @PrePersist // native query 를 사용할 경우 들어가지 않는다.
-        public void createDate() {
-            this.createDate = LocalDateTime.now();
-        }
-     */
+    @PrePersist // native query 를 사용할 경우 들어가지 않는다.
+    public void createDate() { this.createDate = LocalDateTime.now(); }
 }

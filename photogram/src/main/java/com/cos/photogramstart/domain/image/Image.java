@@ -40,7 +40,7 @@ public class Image {
     private boolean likeState;
 
     // 좋아요 개수
-    @Transient
+    @Transient // DB 에 컬럼이 만들어지지 않는다.
     private int likeCount;
 
     // 이미지 댓글 정보 필요함
