@@ -109,6 +109,13 @@ function toggleLike(imageId) {
 			url:`/api/image/${imageId}/likes`,
 			dataType:"JSON"
 		}).done(res => {
+			let likeCountStr = $(`#storyLikeCount-${imageId}`).text();
+			let likeCount = Number(likeCountStr) + 1; // 문자이기 때문에 캐스팅 후 + 1
+
+			console.log("좋아요 카운트", likeCount);
+
+			$(`#storyLikeCount-${imageId}`).text(likeCount);
+
 			likeIcon.addClass("fas");
 			likeIcon.addClass("active");
 			likeIcon.removeClass("far");
@@ -123,6 +130,14 @@ function toggleLike(imageId) {
 			url:`/api/image/${imageId}/likes`,
 			dataType:"JSON"
 		}).done(res => {
+
+			let likeCountStr = $(`#storyLikeCount-${imageId}`).text();
+			let likeCount = Number(likeCountStr) - 1; // 문자이기 때문에 캐스팅 후 - 1
+
+			console.log("좋아요 카운트", likeCount);
+
+			$(`#storyLikeCount-${imageId}`).text(likeCount);
+
 			likeIcon.removeClass("fas");
 			likeIcon.removeClass("active");
 			likeIcon.addClass("far");

@@ -2,6 +2,7 @@ package com.cos.photogramstart.domain.likes;
 
 import com.cos.photogramstart.domain.image.Image;
 import com.cos.photogramstart.domain.user.User;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -36,6 +37,7 @@ public class Likes { // Like 가 MariaDB 나 MySQL 에 있기 때문에
     // @ManyToOne 은 Fetch.EAGER 전략이다.
     private Image image;
 
+    @JsonIgnoreProperties({"images"})
     // 위에 Image 를 가져오기 때문에, 추후에 안되게 함 (무한참조)
     @JoinColumn(name = "userId")
     @ManyToOne
