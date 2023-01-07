@@ -16,7 +16,7 @@
 						id="userProfileImageInput" />
 				</form>
 
-				<img class="profile-image" src="#"
+				<img class="profile-image" src="/upload/${dto.user.profileImageUrl}"
 					onerror="this.src='/images/person.jpeg'" id="userProfileImage" />
 			</div>
 		</div>
@@ -87,7 +87,13 @@
 					<!-- WebMvcConfig 에 적은 내용을 보면, 이 Config 가 해당 주소를 낚아챈다. -->
 					</a>
 					<div class="comment">
-						<a href="#" class=""> <i class="fas fa-heart"></i><span>0</span>
+						<!-- likeCount 는 없는 컬럼(생성한 컬럼, 별칭)이기 때문에 나오진 않음 -->
+						<!-- UserService 에 dto 에 값을 넣어야한다. -->
+						<a href="#" class=""> <i class="fas fa-heart"></i><span>${image.likeCount}</span>
+
+						<%-- 아래의 방법으로도 좋아요 개수를 확인할 수 있다. (하지만, UserService 에 넣는 것이 낫다.)
+							<!-- <a href="#" class=""> <i class="fas fa-heart"></i><span>${image.likes.size()}</span> -->
+						--%>
 						</a>
 					</div>
 				</div>
@@ -112,7 +118,7 @@
 <div class="modal-image" onclick="modalImage()">
 	<div class="modal">
 		<p>프로필 사진 바꾸기</p>
-		<button onclick="profileImageUpload()">사진 업로드</button>
+		<button onclick="profileImageUpload(${dto.user.id}, ${principal.user.id})">사진 업로드</button>
 		<button onclick="closePopup('.modal-image')">취소</button>
 	</div>
 </div>

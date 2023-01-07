@@ -60,24 +60,26 @@ function getStoryItem(image) {
 			<p>${image.caption}</p>
 		</div>
 		
-		<div id="storyCommentList-1">
-		
-		<div class="sl__item__contents__comment" id="storyCommentItem-1"">
-			<p>
-			<b>Lovely :</b> 부럽습니다.
-		</p>
-		
-		<button>
-			<i class="fas fa-times"></i>
-		</button>
-		
-		</div>
-		
+		<div id="storyCommentList-${image.id}">`;
+
+			image.comments.forEach((comment) => {
+				item += `<div class="sl__item__contents__comment" id="storyCommentItem-${comment.id}"">
+				<p>
+					<b>${comment.user.username} :</b> ${comment.content}
+				</p>
+				
+				<button>
+					<i class="fas fa-times"></i>
+				</button>
+			</div>`;
+			});
+
+		item +=`
 		</div>
 		
 		<div class="sl__item__input">
-			<input type="text" placeholder="댓글 달기..." id="storyCommentInput-1" />
-			<button type="button" onClick="addComment()">게시</button>
+			<input type="text" placeholder="댓글 달기..." id="storyCommentInput-${image.id}" />
+			<button type="button" onClick="addComment(${image.id})">게시</button>
 		</div>
 		
 		</div>
@@ -150,31 +152,57 @@ function toggleLike(imageId) {
 }
 
 // (4) 댓글쓰기
-function addComment() {
+function addComment(imageId) { // 로그인한 사람의 정보도 변수에 넣어야하지만 세션을 통해서 찾기
 
-	let commentInput = $("#storyCommentInput-1");
-	let commentList = $("#storyCommentList-1");
+	// addComment 를 하고 난 뒤에는 storyCommentList 를 찾아서 append 를 해야한다.
+
+	let commentInput = $(`#storyCommentInput-${imageId}`);
+	let commentList = $(`#storyCommentList-${imageId}`);
 
 	let data = {
+		imageId: imageId,
 		content: commentInput.val()
 	}
+
+	// alert(data.content);
+
+	// console.log(data); data 자체
+	// console.log(JSON.stringify(data)); JSON 으로 변경한 것
+
+	// return;
 
 	if (data.content === "") {
 		alert("댓글을 작성해주세요!");
 		return;
 	}
 
-	let content = `
-			  <div class="sl__item__contents__comment" id="storyCommentItem-2""> 
+	$.ajax({
+		type : "post",
+		url : `/api/comment`,
+		data : JSON.stringify(data),
+		contentType : "application/json; charset=utf-8",
+		dataType : "json"
+	}).done(res => {
+		console.log("댓글 작성 성공", res); // res 안에 데이터 내용들이 있음
+
+		let comment = res.data;
+
+		let content = `
+			  <div class="sl__item__contents__comment" id="storyCommentItem-${comment.id}"> 
 			    <p>
-			      <b>GilDong :</b>
-			      댓글 샘플입니다.
+			      <b>${comment.user.username} :</b>
+			      ${comment.content}
 			    </p>
 			    <button><i class="fas fa-times"></i></button>
 			  </div>
-	`;
-	commentList.prepend(content);
-	commentInput.val("");
+		`;
+		commentList.prepend(content); // append 는 뒤에 넣는 것, prepend 는 앞에다가 넣음 (최신 댓글이 제일 위로)
+
+	}).fail(error => {
+		console.log("댓글 작성 실패", error);
+	});
+
+	commentInput.val(""); // input 필드를 깨끗하게 비워주는 것
 }
 
 // (5) 댓글 삭제

@@ -87,7 +87,17 @@ function getSubscribeModalItem(u) {
 }
 
 // (3) 유저 프로파일 사진 변경 (완)
-function profileImageUpload() {
+function profileImageUpload(pageUserId, principalId) {
+
+	// console.log("pageUserId", pageUserId);
+	// console.log("principalId", principalId);
+
+	if(pageUserId != principalId) {
+		alert("프로필 수정 권한을 가지고 있지 않은 사용자입니다.");
+		return;
+	}
+
+
 	$("#userProfileImageInput").click();
 
 	$("#userProfileImageInput").on("change", (e) => {
@@ -98,12 +108,34 @@ function profileImageUpload() {
 			return;
 		}
 
-		// 사진 전송 성공시 이미지 변경
-		let reader = new FileReader();
-		reader.onload = (e) => {
-			$("#userProfileImage").attr("src", e.target.result);
-		}
-		reader.readAsDataURL(f); // 이 코드 실행시 reader.onload 실행됨.
+		// 서버에 이미지를 전송
+		let profileImageForm = $("#userProfileImageForm")[0]; // 배열로 리턴하기 때문에 0 으로 설정
+		// console.log(profileImageForm);
+
+		// form 데이터(form 태그의 필드오 그 값을 나타내는 Key/Value 쌍)를 전송하려면 formData 객체로 받는다.
+		// FormData 객체를 이용하면 form 태그의 필드와 그 값을 나타내는 일련의 key/value 쌍을 담을 수 있다.
+		let formData = new FormData(profileImageForm); // 사진전송이 아니라면, 그냥 serialize 를 사용하면 된다. (update.js 참고)
+
+		$.ajax({
+			type : "put",
+			url : `/api/user/${principalId}/profileImageUrl`,
+			data : formData,
+			contentType : false, // 필수 : x-www-form-urlencoded 로 파싱되는 것을 방지
+			processData : false, // 필수 : contenetType 을 false 로 줬을 때
+			enctype : "multipart/form-data", // jsp 에 설정해뒀으면 안적어도 됨
+			dataType : "JSON"
+		}).done(res => {
+
+			// 사진 전송 성공시 이미지 변경
+			let reader = new FileReader();
+			reader.onload = (e) => {
+				$("#userProfileImage").attr("src", e.target.result);
+			}
+			reader.readAsDataURL(f); // 이 코드 실행시 reader.onload 실행됨.
+
+		}).fail(error => {
+			console.log("오류", error);
+		});
 	});
 }
 

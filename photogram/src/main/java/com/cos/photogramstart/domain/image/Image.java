@@ -1,5 +1,6 @@
 package com.cos.photogramstart.domain.image;
 
+import com.cos.photogramstart.domain.comment.Comment;
 import com.cos.photogramstart.domain.likes.Likes;
 import com.cos.photogramstart.domain.user.User;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
@@ -36,15 +37,18 @@ public class Image {
     @OneToMany(mappedBy = "image") // likes 의 image 변수 이름
     private List<Likes> likes; // Image 를 선택할 때 Likes 도 같이 가져오게 된다.
 
+    // 이미지 댓글 정보 필요함 - 양방향 매핑
+    @OrderBy("id DESC") // id 내림차순
+    @JsonIgnoreProperties({"image"})
+    @OneToMany(mappedBy = "image") // FK 의 자바변수를 적어야한다. + FetchType.LAZY 이다.
+    private List<Comment> comments;
+
     @Transient // DB 에 컬럼이 만들어지지 않는다.
     private boolean likeState;
 
     // 좋아요 개수
     @Transient // DB 에 컬럼이 만들어지지 않는다.
     private int likeCount;
-
-    // 이미지 댓글 정보 필요함
-
 
     private LocalDateTime createDate;
 

@@ -4,7 +4,9 @@ function update(userId, event) {
 
     // profileUpdate 는 form 의  id 값을 의미한다.
     // serialize() 를 하면, 모든 값들이 데이터화 된다.
-    let data = $("#profileUpdate").serialize();
+    let data = $("#profileUpdate").serialize(); // key = value
+
+    console.log(data);
 
     $.ajax({
         type:"put",
