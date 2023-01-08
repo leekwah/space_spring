@@ -4,27 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f68ff5de-1489-4237-8041-d72ec5abfc31" name="Changes" comment="인기게시글 작성 완료">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/domain/comment/Comment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/domain/comment/CommentRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/service/CommentService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/web/api/CommentApiComment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/web/dto/comment/CommentDto.java" afterDir="false" />
+    <list default="true" id="f68ff5de-1489-4237-8041-d72ec5abfc31" name="Changes" comment="댓글 작성 기능">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/domain/image/Image.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/domain/image/Image.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/web/api/UserApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/web/api/UserApiController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/profile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/service/CommentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/service/CommentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/web/api/CommentApiComment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/web/api/CommentApiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/web/dto/comment/CommentDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/web/dto/comment/CommentDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/story.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/story.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/update.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/update.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/profile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/profile.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cos/photogramstart/domain/image/ImageRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cos/photogramstart/domain/image/ImageRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cos/photogramstart/service/ImageService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cos/photogramstart/service/ImageService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cos/photogramstart/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cos/photogramstart/service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cos/photogramstart/web/api/UserApiController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cos/photogramstart/web/api/UserApiController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/profile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/layout/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/layout/header.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cos/photogramstart/domain/image/Image$ImageBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cos/photogramstart/domain/image/Image$ImageBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cos/photogramstart/domain/image/Image.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cos/photogramstart/domain/image/Image.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cos/photogramstart/service/CommentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cos/photogramstart/service/CommentService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cos/photogramstart/web/api/CommentApiComment.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/static/js/story.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/story.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/update.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/update.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -288,7 +279,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672993226841</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="댓글 작성 기능">
+      <created>1673096150598</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1673096150598</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -338,6 +336,7 @@
     <MESSAGE value="좋아요 숫자 작성" />
     <MESSAGE value="좋아요 완성" />
     <MESSAGE value="인기게시글 작성 완료" />
-    <option name="LAST_COMMIT_MESSAGE" value="인기게시글 작성 완료" />
+    <MESSAGE value="댓글 작성 기능" />
+    <option name="LAST_COMMIT_MESSAGE" value="댓글 작성 기능" />
   </component>
 </project>

@@ -7,6 +7,9 @@
 	(5) 댓글삭제
  */
 
+// (0) 현재 로그인한 사용자 아이디
+let principalId = $("#principalId").val();
+
 // (1) 스토리 로드하기
 let page = 0;
 
@@ -66,11 +69,15 @@ function getStoryItem(image) {
 				item += `<div class="sl__item__contents__comment" id="storyCommentItem-${comment.id}"">
 				<p>
 					<b>${comment.user.username} :</b> ${comment.content}
-				</p>
-				
-				<button>
-					<i class="fas fa-times"></i>
-				</button>
+				</p>`;
+
+				if(principalId == comment.user.id) {
+					item += `<button onclick="deleteComment(${comment.id})">
+								<i class="fas fa-times"></i>
+							</button>`;
+				}
+
+				item +=`
 			</div>`;
 			});
 
@@ -193,7 +200,12 @@ function addComment(imageId) { // 로그인한 사람의 정보도 변수에 넣
 			      <b>${comment.user.username} :</b>
 			      ${comment.content}
 			    </p>
-			    <button><i class="fas fa-times"></i></button>
+			    
+			    <button onclick="deleteComment(${comment.id})">
+			    	<i class="fas fa-times"></i>
+			    </button>
+					
+		
 			  </div>
 		`;
 		commentList.prepend(content); // append 는 뒤에 넣는 것, prepend 는 앞에다가 넣음 (최신 댓글이 제일 위로)
@@ -206,7 +218,19 @@ function addComment(imageId) { // 로그인한 사람의 정보도 변수에 넣
 }
 
 // (5) 댓글 삭제
-function deleteComment() {
+function deleteComment(commentId) {
+
+	$.ajax({
+		type : "delete",
+		url : `/api/comment/${commentId}`,
+		dataType : "JSON"
+	}).done(res => {
+		console.log("댓글 삭제 성공", res);
+		// 삭제를 했을 시에, 없애는 것
+		$(`#storyCommentItem-${commentId}`).remove();
+	}).fail(error => {
+		console.log("댓글 삭제 실패", error);
+	});
 
 }
 

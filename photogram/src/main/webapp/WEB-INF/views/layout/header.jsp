@@ -6,6 +6,7 @@
 <sec:authorize access="isAuthenticated()">
 	<sec:authentication property="principal" var="principal"/>
 </sec:authorize>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -33,7 +34,9 @@
 </head>
 
 <body>
-	
+	<!-- principalId 담아두는 곳 -> 어디에서든지 쓸 수 있다.-->
+	<input type="hidden" id="principalId" value="${principal.user.id}">
+
 	<header class="header">
 		<div class="container">
 			<a href="/" class="logo">
@@ -54,3 +57,4 @@
 			</nav>
 		</div>
 	</header>
+
