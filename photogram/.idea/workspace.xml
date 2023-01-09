@@ -4,17 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f68ff5de-1489-4237-8041-d72ec5abfc31" name="Changes" comment="댓글 작성 기능">
+    <list default="true" id="f68ff5de-1489-4237-8041-d72ec5abfc31" name="Changes" comment="댓글 삭제 기능">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/handler/aop/ValidationAdvice.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/domain/comment/CommentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/domain/comment/CommentRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/domain/user/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/domain/user/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/service/CommentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/service/CommentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/web/api/CommentApiComment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/web/api/CommentApiController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/web/dto/comment/CommentDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/web/dto/comment/CommentDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/web/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/web/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/web/api/CommentApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/web/api/CommentApiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/web/api/UserApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/web/api/UserApiController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/story.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/story.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/layout/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/layout/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cos/photogramstart/domain/image/Image$ImageBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cos/photogramstart/domain/image/Image$ImageBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cos/photogramstart/domain/image/Image.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cos/photogramstart/domain/image/Image.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/cos/photogramstart/service/CommentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cos/photogramstart/service/CommentService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cos/photogramstart/web/api/CommentApiComment.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cos/photogramstart/web/AuthController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cos/photogramstart/web/AuthController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cos/photogramstart/web/api/UserApiController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cos/photogramstart/web/api/UserApiController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/static/js/story.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/story.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -286,7 +289,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673096150598</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="댓글 삭제 기능">
+      <created>1673183168224</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1673183168224</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -337,6 +347,7 @@
     <MESSAGE value="좋아요 완성" />
     <MESSAGE value="인기게시글 작성 완료" />
     <MESSAGE value="댓글 작성 기능" />
-    <option name="LAST_COMMIT_MESSAGE" value="댓글 작성 기능" />
+    <MESSAGE value="댓글 삭제 기능" />
+    <option name="LAST_COMMIT_MESSAGE" value="댓글 삭제 기능" />
   </component>
 </project>

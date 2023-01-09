@@ -40,30 +40,20 @@ public class AuthController {
     @PostMapping("/auth/signup")
     public String signup(@Valid SignupDto signupDTO, BindingResult bindingResult) { // key = value 형식으로 온다. (x-www-form-urlencoded 방식)
 
-        if (bindingResult.hasErrors()) { // bindingResult 에 Error 가 있을 경우
-            Map<String, String> errorMap = new HashMap<>();
+        // log.info(signupDTO.toString());
 
-            for (FieldError error : bindingResult.getFieldErrors()) {
-                errorMap.put(error.getField(), error.getDefaultMessage());
-            }
-            // throw new RuntimeException("유효성 검사 실패함");
-            throw new CustomValidationException("유효성 검사 실패함", errorMap);
-        } else {
-            log.info(signupDTO.toString());
+        // User 라는 데이터에 <- singupDTO 를 넣는 것이다. (builder 를 활용)
+        User user = signupDTO.toEntity();
+        log.info(user.toString()); // 값이 제대로 넘어오는 지 확인 (다른 user 의 값들은 null 로 처리됨)
+        authService.회원가입(user); // 회원가입 끝
 
-            // User 라는 데이터에 <- singupDTO 를 넣는 것이다. (builder 를 활용)
-            User user = signupDTO.toEntity(); //
-            log.info(user.toString()); // 값이 제대로 넘어오는 지 확인 (다른 user 의 값들은 null 로 처리됨)
+        // 비밀번호 암호화, 권한 설정
 
-            User userEntity = authService.회원가입(user);
-            System.out.println(userEntity);
+        // 추후에 로그를 남기는 후처리
 
-            // 비밀번호 암호화, 권한 설정
+        return "auth/signin"; // 회원가입 후 /auth/signin 으로 가게 한다.
+        // @ResponseBody 를 넣으면, Data 를 리턴한다. (jsp 파일을 리턴해주지 않음)
 
-
-            return "auth/signin"; // 회원가입 후 /auth/signin 으로 가게 한다.
-            // @ResponseBody 를 넣으면, Data 를 리턴한다. (jsp 파일을 리턴해주지 않음)
-        }
 
     }
 

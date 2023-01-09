@@ -34,27 +34,15 @@ public class UserApiController {
     private final SubscribeService subscribeService;
 
     @PutMapping("/api/user/{id}")
-    public CMRespDto<?> update(
-            @PathVariable int id,
-            @Valid UserUpdateDto userUpdateDto,
-            BindingResult bindingResult, // 꼭 @Valid parameter 다음에 적어야함
-            @AuthenticationPrincipal PrincipalDetails principalDetails) {
+    public CMRespDto<?> update(@PathVariable int id, @Valid UserUpdateDto userUpdateDto, BindingResult bindingResult, @AuthenticationPrincipal PrincipalDetails principalDetails) {
+        // BindingResult 는 꼭 @Valid parameter 다음에 적어야함
 
-        if (bindingResult.hasErrors()) { // bindingResult 에 Error 가 있을 경우
-            Map<String, String> errorMap = new HashMap<>();
+        User userEntity = userService.회원수정(id, userUpdateDto.toEntity());
 
-            for (FieldError error : bindingResult.getFieldErrors()) {
-                errorMap.put(error.getField(), error.getDefaultMessage());
-            }
-            throw new CustomValidationApiException("유효성 검사 실패함", errorMap);
-        } else { // 정상일 경우에
-            User userEntity = userService.회원수정(id, userUpdateDto.toEntity());
-
-            // 이후에 세션 정보를 바꿔야지 적용됨 -> principalDetails 활용
-            principalDetails.setUser(userEntity);
-            return new CMRespDto<>(1, "회원 수정 완료", userEntity); // 응답시에 userEntity 의 모든 getter 함수가 호출되고 JSON 으로 파싱하여 응답한다.
-            // 내부로 또 파싱하는 걸 막아야한다. (@JsonIgnoreProperties("{user}") 를 User.java 에 추가한다.)
-        }
+        // 이후에 세션 정보를 바꿔야지 적용됨 -> principalDetails 활용
+        principalDetails.setUser(userEntity);
+        return new CMRespDto<>(1, "회원 수정 완료", userEntity); // 응답시에 userEntity 의 모든 getter 함수가 호출되고 JSON 으로 파싱하여 응답한다.
+        // 내부로 또 파싱하는 걸 막아야한다. (@JsonIgnoreProperties("{user}") 를 User.java 에 추가한다.)
     }
 
     @GetMapping("/api/user/{pageUserId}/subscribe")

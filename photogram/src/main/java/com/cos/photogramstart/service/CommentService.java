@@ -31,7 +31,6 @@ public class CommentService {
            throw new CustomApiException("유저 아이디를 찾을 수 없습니다.");
         });
 
-
         Comment comment = new Comment();
 
         comment.setContent(content);
