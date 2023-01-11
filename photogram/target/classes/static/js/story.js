@@ -184,34 +184,33 @@ function addComment(imageId) { // 로그인한 사람의 정보도 변수에 넣
 	}
 
 	$.ajax({
-		type : "post",
-		url : `/api/comment`,
-		data : JSON.stringify(data),
-		contentType : "application/json; charset=utf-8",
-		dataType : "json"
-	}).done(res => {
+		type: "post",
+		url: "/api/comment",
+		data: JSON.stringify(data),
+		contentType: "application/json; charset=utf-8",
+		dataType: "json"
+	}).done(res=>{
 		console.log("댓글 작성 성공", res); // res 안에 데이터 내용들이 있음
 
 		let comment = res.data;
 
 		let content = `
-			  <div class="sl__item__contents__comment" id="storyCommentItem-${comment.id}"> 
-			    <p>
-			      <b>${comment.user.username} :</b>
-			      ${comment.content}
-			    </p>
-			    
-			    <button onclick="deleteComment(${comment.id})">
-			    	<i class="fas fa-times"></i>
-			    </button>
-					
-		
-			  </div>
+		  <div class="sl__item__contents__comment" id="storyCommentItem-${comment.id}"> 
+		    <p>
+		      <b>${comment.user.username} :</b>
+		      ${comment.content}
+		    </p>
+		    <button onclick="deleteComment(${comment.id})"><i class="fas fa-times"></i></button>
+		  </div>
 		`;
 		commentList.prepend(content); // append 는 뒤에 넣는 것, prepend 는 앞에다가 넣음 (최신 댓글이 제일 위로)
 
 	}).fail(error => {
-		console.log("댓글 작성 실패", error);
+		console.log("오류", error.responseJSON.data.content);
+		alert(error.responseJSON.data.content);
+		// alert(error.responseJSON.data.content);
+		// 프론트단에서 다 뚫고 들어왔을 경우에 한해서 작동 (서버단)
+		// 어지간하면 앞에서 다 막힘
 	});
 
 	commentInput.val(""); // input 필드를 깨끗하게 비워주는 것

@@ -4,15 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f68ff5de-1489-4237-8041-d72ec5abfc31" name="Changes" comment="AOP">
+    <list default="true" id="f68ff5de-1489-4237-8041-d72ec5abfc31" name="Changes" comment="AOP, 댓글기능 재수정">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/config/oauth/OAuth2DetailsService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/service/CommentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/service/CommentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/web/api/CommentApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/web/api/CommentApiController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/story.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/story.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/auth/signup.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/auth/signup.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/config/auth/PrincipalDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/config/auth/PrincipalDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/domain/user/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/domain/user/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/auth/signin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/auth/signin.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cos/photogramstart/config/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cos/photogramstart/config/SecurityConfig.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/cos/photogramstart/domain/user/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cos/photogramstart/domain/user/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cos/photogramstart/service/CommentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cos/photogramstart/service/CommentService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cos/photogramstart/web/AuthController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cos/photogramstart/web/AuthController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/static/js/story.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/story.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -298,7 +300,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673265434708</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="AOP, 댓글기능 재수정">
+      <created>1673352537321</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1673352537321</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -351,6 +360,7 @@
     <MESSAGE value="댓글 작성 기능" />
     <MESSAGE value="댓글 삭제 기능" />
     <MESSAGE value="AOP" />
-    <option name="LAST_COMMIT_MESSAGE" value="AOP" />
+    <MESSAGE value="AOP, 댓글기능 재수정" />
+    <option name="LAST_COMMIT_MESSAGE" value="AOP, 댓글기능 재수정" />
   </component>
 </project>

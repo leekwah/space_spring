@@ -21,7 +21,7 @@ spring:
   jpa:
     open-in-view: true # false 로 바꾸면, 세션이 컨트롤러에서 서비스로 갈 때 종료된다.
     hibernate:
-      ddl-auto: update # create 로 바꾸면, insert 데이터들이 다 날아간다.
+      ddl-auto: create # create 로 바꾸면, insert 데이터들이 다 날아간다.
       naming:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
     show-sql: true
@@ -34,8 +34,21 @@ spring:
   security:
     user:
       name: test
-      password: 1234   
+      password: 1234
+    oauth2:
+      client:
+        registration:
+          facebook:
+            client-id: 872493777397703
+            client-secret: 3125afd11d2c8cc15fd9c7b7f7f29d9e
+            scope:
+              - public_profile
+              - email
+
+#페이스북 관련 Outh2 등록
 
 file:
   path: /Users/kwah/Downloads/GitHub/spring/upload/
   # 나의 주소임
+
+
