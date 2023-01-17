@@ -4,8 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f68ff5de-1489-4237-8041-d72ec5abfc31" name="Changes" comment="완성">
+    <list default="true" id="f68ff5de-1489-4237-8041-d72ec5abfc31" name="Changes" comment="princip">
+      <change afterPath="$PROJECT_DIR$/../shop/src/main/java/com/kwah/shop/config/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shop/src/main/java/com/kwah/shop/config/auth/PrincipalDetails.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shop/src/main/java/com/kwah/shop/config/auth/PrincipalDetailsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shop/src/main/java/com/kwah/shop/domain/user/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shop/src/main/java/com/kwah/shop/domain/user/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shop/src/main/resources/templates/section/content.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shop/src/main/resources/templates/section/footer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0c99891e-e6f6-4689-b66f-11eaa3eb09e5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/0c99891e-e6f6-4689-b66f-11eaa3eb09e5.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/config/auth/PrincipalDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cos/photogramstart/config/auth/PrincipalDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../shop/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/src/main/resources/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/../shop/src/main/resources/templates/section/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../shop/src/main/resources/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,6 +113,7 @@
       <workItem from="1672579471239" duration="3385000" />
       <workItem from="1672896870205" duration="4806000" />
       <workItem from="1673526545261" duration="200000" />
+      <workItem from="1673967000846" duration="1533000" />
     </task>
     <task id="LOCAL-00001" summary="SpringSecurity 설정, JPA 설정">
       <created>1671131336399</created>

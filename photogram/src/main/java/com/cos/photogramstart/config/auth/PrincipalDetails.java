@@ -13,7 +13,7 @@ import java.util.Map;
 @Data
 public class PrincipalDetails implements UserDetails, OAuth2User {
 
-    private static final long sericalVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
     // 결국 여기에 User Object 를 담는 것이다.
     private User user;
