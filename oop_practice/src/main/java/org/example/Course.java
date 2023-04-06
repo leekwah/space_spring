@@ -40,12 +40,6 @@ public class Course {
             case "C":
                 grade = 2.0;
                 break;
-            case "D+":
-                grade = 1.5;
-                break;
-            case "D":
-                grade = 1.0;
-                break;
         }
         return grade;
     }
