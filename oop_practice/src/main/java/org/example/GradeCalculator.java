@@ -14,7 +14,8 @@ public class GradeCalculator {
 
         // (학점 수 * 교과목 평점)의 합계
         for (Course course : courses) {
-            multipliedCreditAndCourseGrade += course.getCredit() * course.getGradeToNumber(); // 학점과 성적을 숫자로 변경한 값을 곱한다.
+            multipliedCreditAndCourseGrade += course.multiplyCreditAndCourseGrade();
+            // multipliedCreditAndCourseGrade += course.getCredit() * course.getGradeToNumber(); // 학점과 성적을 숫자로 변경한 값을 곱한다.
         }
 
         // 수강신청 총 학점 수

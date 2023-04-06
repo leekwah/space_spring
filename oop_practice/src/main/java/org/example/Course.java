@@ -15,6 +15,10 @@ public class Course {
         return credit;
     }
 
+    public double multiplyCreditAndCourseGrade() {
+        return credit * getGradeToNumber();
+    }
+
     public double getGradeToNumber() {
         double grade = 0;
         switch (this.grade) {
