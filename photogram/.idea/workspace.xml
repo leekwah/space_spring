@@ -5,20 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f68ff5de-1489-4237-8041-d72ec5abfc31" name="Changes" comment="princip">
-      <change afterPath="$PROJECT_DIR$/../shop/src/main/resources/static/css/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shop/src/main/resources/static/css/bootstrap.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shop/src/main/resources/static/css/product.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shop/src/main/resources/static/js/bootstrap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../board/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../board/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../oop_practice/src/test/java/org/example/MenuTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0c99891e-e6f6-4689-b66f-11eaa3eb09e5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/0c99891e-e6f6-4689-b66f-11eaa3eb09e5.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cos/photogramstart/config/auth/PrincipalDetails.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cos/photogramstart/config/auth/PrincipalDetails.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shop/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../shop/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shop/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../shop/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shop/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../shop/src/main/resources/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shop/src/main/resources/templates/section/content.html" beforeDir="false" afterPath="$PROJECT_DIR$/../shop/src/main/resources/templates/section/content.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shop/src/main/resources/templates/section/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/../shop/src/main/resources/templates/section/header.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,26 +45,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/kwah/Downloads/GitHub/spring/photogram&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;eae33cdd930e56087fcbc4543367dac1&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/kwah/Downloads/GitHub/spring/photogram",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "spring.configuration.checksum": "eae33cdd930e56087fcbc4543367dac1",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mariadb&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mariadb"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.cos.photogramstart.handler.ex" />
@@ -121,6 +116,7 @@
       <workItem from="1675929265687" duration="552000" />
       <workItem from="1678254715329" duration="661000" />
       <workItem from="1678867701475" duration="2664000" />
+      <workItem from="1680861564419" duration="614000" />
     </task>
     <task id="LOCAL-00001" summary="SpringSecurity 설정, JPA 설정">
       <created>1671131336399</created>
