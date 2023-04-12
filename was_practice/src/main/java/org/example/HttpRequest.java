@@ -18,7 +18,7 @@ public class HttpRequest {
         return requestLine.matchPath(requestPath);
     }
 
-    public QueryStrings getQueryString() {
+    public QueryStrings getQueryStrings() {
         return requestLine.getQueryStrings();
     }
 }
