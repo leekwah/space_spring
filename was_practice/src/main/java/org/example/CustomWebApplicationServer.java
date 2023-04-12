@@ -6,9 +6,12 @@ import org.slf4j.LoggerFactory;
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 public class CustomWebApplicationServer {
     private final int port; // port 값
+    private static ExecutorService executorService = Executors.newFixedThreadPool(10);
     private static final Logger logger = LoggerFactory.getLogger(CustomWebApplicationServer.class);
     public CustomWebApplicationServer(int port) {
         this.port = port;
@@ -25,9 +28,9 @@ public class CustomWebApplicationServer {
                 logger.info("[CustomWebApplicationServer] client connected!"); // 클라이언트가 연결되었다는 의미이다.
 
                 /*
-                 * Step 2 - 사용자 요청이 들어올 때 마다 Thread를 새로 생성해서, 사용자 요청을 처리하도록 한다.
+                 * Step 3 - Thread Pool을 이용하기
                  */
-                new Thread(new ClientRequestHandler(clientSocket)).start();
+                executorService.execute(new ClientRequestHandler(clientSocket));
             }
         }
     }
