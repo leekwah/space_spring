@@ -1,6 +1,7 @@
 package org.example.mvc;
 
 import org.example.mvc.controller.Controller;
+import org.example.mvc.controller.RequestMethod;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -29,7 +30,7 @@ public class DispatcherServlet extends HttpServlet { // 서블릿이어야 하�
         log.info("[DispatcherServlet] service started");
 
         try {
-            Controller handler = rmhm.findHandler(request.getRequestURI()); //
+            Controller handler = rmhm.findHandler(new HandlerKey(RequestMethod.valueOf(request.getMethod()), request.getRequestURI()));
             String viewName = handler.handleRequest(request, response);// handler에게 작업을 위임한다.
 
             RequestDispatcher requestDispatcher = request.getRequestDispatcher(viewName);
