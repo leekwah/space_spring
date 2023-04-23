@@ -3,6 +3,7 @@ package org.example.mvc;
 import org.example.mvc.controller.Controller;
 import org.example.mvc.controller.RequestMethod;
 import org.example.mvc.view.JspViewResolver;
+import org.example.mvc.view.ModelAndView;
 import org.example.mvc.view.View;
 import org.example.mvc.view.ViewResolver;
 import org.slf4j.Logger;
@@ -25,6 +26,8 @@ public class DispatcherServlet extends HttpServlet { // 서블릿이어야 하�
 
     private RequestMappingHandlerMapping rmhm;
 
+    private List<HandlerAdapter> handlerAdapters;
+
     private List<ViewResolver> viewResolvers;
 
     @Override
@@ -32,6 +35,7 @@ public class DispatcherServlet extends HttpServlet { // 서블릿이어야 하�
         rmhm = new RequestMappingHandlerMapping();
         rmhm.init();
 
+        handlerAdapters = List.of(new SimpleControllerHandlerAdapter());
         viewResolvers = Collections.singletonList(new JspViewResolver()); // 초기화
     }
 
@@ -44,9 +48,16 @@ public class DispatcherServlet extends HttpServlet { // 서블릿이어야 하�
             // viewName이 redirect
             String viewName = handler.handleRequest(request, response); // handler에게 작업을 위임한다.
 
+            HandlerAdapter handlerAdapter = handlerAdapters.stream()
+                    .filter(ha -> ha.supports(handler))
+                    .findFirst()
+                    .orElseThrow(() -> new ServletException("No adapter for handler ["+handler+"]"));
+
+            ModelAndView modelAndView = handlerAdapter.handle(request, response, handler);
+
             for (ViewResolver viewResolver : viewResolvers) {
-                View view = viewResolver.resolveView(viewName);
-                view.render(new HashMap<>(), request, response);
+                View view = viewResolver.resolveView(modelAndView.getViewName());
+                view.render(modelAndView.getModel(), request, response); // modelAndView.getModel() 메서드를 통해서, 모델명을 가져온다.
             }
         } catch (Exception e) {
             log.error("exception occurred : [{}]", e.getMessage(), e);
